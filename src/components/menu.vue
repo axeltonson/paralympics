@@ -35,10 +35,17 @@ export default {
 <style lang="scss" scoped>
 
 .hmenu{
-
+   position: fixed;
+   z-index: 10;
+   top: 0;
+   left: 0;
 }
 
 .hmenu__main{
+   position: absolute;
+   z-index: 12;
+   top: 0;
+   left: 0;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -60,19 +67,30 @@ export default {
 .hmenu__main-button:last-child{
    margin-bottom: 0;
 }
-
 .hmenu__main-button.active span{width: 30px; border-radius: 2px;}
 .hmenu__main-button.active span + span{width: 38px;}
 .hmenu__main-button.active span + span + span{width: 23px;}
 
 .hmenu__toggle{
-
+   position: absolute;
+   z-index: 11;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0vh;
+   background-color: rgba(0,0,0,0.2);
+   overflow: hidden;
+   transition: 0.4s;
+}
+.hmenu__toggle.active{
+   height: 100vh;
 }
 .hmenu__toggle-menu{
-
+   padding: 60px 70px;
 }
 .hmenu__toggle-menu-item{
-
+   margin-top: 40px;
+   font-size: 30px;
 }
 
 </style>
