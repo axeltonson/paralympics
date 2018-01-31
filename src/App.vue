@@ -10,6 +10,23 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: $white;
+    background-color: $black;
+    @media #{$tablet} {
+      // EXEMPLE DE MEDIA QUERY
+    }
+  }
 
+  /* Portraits Style */
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 0;
+  }
 </style>
