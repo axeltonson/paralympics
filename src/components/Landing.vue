@@ -1,5 +1,5 @@
 <template>
-  <div class="landing"> 
+  <div class="landing">
     <span class="discover">Discover</span>
     <h1><span>The real</span> heroes</h1>
     <p>The real  heroes  is … Cras justo odio, dapibus ac facilisis in, egestas eget</p>
