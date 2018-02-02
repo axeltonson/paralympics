@@ -1,38 +1,65 @@
 <template>
+<transition>
+  <div class="vue select">
+     <div class="select__content">
+        <div class="select__content-items">
 
-<div class="vue select">
-   <div class="select__content">
-      <div class="select__content-items">
+           <div class="select__item" id="selectLeft" v-on:click="selectAnim">
+             <div class="select__item-title">
+               <div class="select__item-nickname-container">
+                 <div class="dash"></div>
+                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+               </div>
+               <h1>
+                 Marie-Amélie Le Fur
+               </h1>
+             </div>
+             <div class="select__item-subtitle">
+               <p>Longueur, 100 m, 200 m, 400 m <p>
+               <p>Athlétisme</p>
+             </div>
+           </div>
+           <div class="select__item" id="selectCenter" v-on:click="selectAnim">
+             <div class="select__item-title">
+               <div class="select__item-nickname-container">
+                 <div class="dash"></div>
+                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+               </div>
+               <h1>
+                 Marie-Amélie Le Fur
+               </h1>
+             </div>
+             <div class="select__item-subtitle">
+               <p>Longueur, 100 m, 200 m, 400 m <p>
+               <p>Athlétisme</p>
+             </div>
+           </div>
+           <div class="select__item" id="selectRight" v-on:click="selectAnim">
+             <div class="select__item-title">
+               <div class="select__item-nickname-container">
+                 <div class="dash"></div>
+                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+               </div>
+               <h1>
+                 Marie-Amélie Le Fur
+               </h1>
+             </div>
+             <div class="select__item-subtitle">
+               <p>Longueur, 100 m, 200 m, 400 m <p>
+               <p>Athlétisme</p>
+             </div>
+           </div>
 
-         <div class="select__item" id="selectLeft" v-on:click="selectAnim">
-            <img class="select__item-image" />
-            <p class="select__item-content">
-               Athlète 1
-            </p>
-         </div>
-         <div class="select__item" id="selectCenter" v-on:click="selectAnim">
-            <img class="select__item-image" />
-            <p class="select__item-content">
-               Athlète 2
-            </p>
-         </div>
-         <div class="select__item" id="selectRight" v-on:click="selectAnim">
-            <img class="select__item-image" />
-            <p class="select__item-content">
-               Athlète 3
-            </p>
-         </div>
-
-      </div>
-      <div class="select__content-scroll">
-         <p class="select__content-scroll-text">
-           Scroll to<br> explore
-         </p>
-         <div class="select__content-scroll-line"></div>
-      </div>
+        </div>
+        <div class="select__content-scroll">
+           <p class="select__content-scroll-text">
+            Scroll to<br> explore
+           </p>
+           <div class="select__content-scroll-line"></div>
+        </div>
+    </div>
   </div>
-</div>
-
+  </transition>
 </template>
 
 <script>
@@ -58,7 +85,33 @@ export default {
         document.getElementById('sCenter').id = 'selectCenter'
         document.getElementById('sRight').id = 'selectRight'
       }
+    },
+    handleScroll: function (event) {
+      if (event.deltaY < 0) {
+        console.log('scrolling up')
+        window.removeEventListener('wheel', this.handleScroll)
+        this.scrollUp()
+      }
+      if (event.deltaY > 0) {
+        console.log('scrolling down')
+        window.removeEventListener('wheel', this.handleScroll)
+        this.scrollDown()
+      }
+    },
+    scrollUp: function () {
+      console.log('scrolling up 2')
+      this.$router.push('/intro')
+    },
+    scrollDown: function () {
+      console.log('scrolling down 2')
+      this.$router.push('/')
+    },
+    clickEvent: function (event) {
+      console.log('click')
     }
+  },
+  created: function () {
+    window.addEventListener('wheel', this.handleScroll)
   }
 }
 </script>
@@ -75,6 +128,10 @@ body{
 #app, .vue{
    height: 100%;
    width: 100%;
+}
+
+.vue{
+  transition: opacity 1s;
 }
 
 /* FIN A SUPPRIMER */
@@ -115,18 +172,20 @@ body{
 
 .select__content-items{
    position: relative;
+   height: 100%;
+   width: 80%;
 }
 
 .select__item{
    position: absolute;
    z-index: 1;
-   top: 30%;
+   bottom: 20%;
    left: 0;
-   opacity: 0.4;
+   opacity: 0.2;
    transition: 0.7s;
 }
 #selectLeft{
-   transform: translate3d(-60px, -10px, -100px);
+   transform: perspective(400px) translate3d(-80px, 0px, -100px);
 }
 /* #selectLeft img{
    background-color: yellow;
@@ -137,7 +196,7 @@ body{
    opacity: 1;
 }
 #selectRight{
-   transform: translate3d(60px, -10px, -100px);
+   transform: perspective(400px) translate3d(80px, 0px, -100px);
 }
 /* #selectRight img{
    background-color: green;
@@ -161,6 +220,24 @@ body{
    width: 100px;
    color: white;
    text-align: center;
+}
+
+/* Enter and Leave transitions */
+.v-enter {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.v-enter-active {
+  /* opacity: 1; */
+  transition: opacity 1s;
+}
+.v-enter {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.v-leave-active {
+  /* opacity: 0; */
+  transition: opacity 1s;
 }
 
 </style>

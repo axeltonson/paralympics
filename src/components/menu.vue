@@ -14,7 +14,7 @@
       <div class="hmenu__toggle">
          <ul class="hmenu__toggle-menu">
             <li class="hmenu__toggle-menu-item">Stories</li>
-            <li class="hmenu__toggle-menu-item">About</li>
+            <li class="hmenu__toggle-menu-item"><router-link to="About">About</router-link></li>
             <li class="hmenu__toggle-menu-item">Share</li>
          </ul>
       </div>

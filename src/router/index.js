@@ -4,6 +4,7 @@ import Landing from '@/components/Landing'
 import Intro from '@/components/Intro'
 import Portrait from '@/components/Portrait'
 import Select from '@/components/Select'
+import About from '@/components/About'
 
 Vue.use(Router)
 
@@ -25,6 +26,10 @@ export default new Router({
       path: '/select',
       name: 'Select',
       component: Select
+    }, {
+      path: '/about',
+      name: 'About',
+      component: About
     }
   ]
 })
