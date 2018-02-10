@@ -104,6 +104,7 @@ body{
    width: 100%;
    padding: 35px 25px 0;
    font-size: 20px;
+  font-weight: 200;
    text-align: center;
    color: #ffffff;
    line-height: 1.5;
@@ -118,9 +119,14 @@ body{
    text-align: left;
 }
 .intro__content-scroll-text{
-   font-size: 14px;
-   color: #ffffff;
-   margin-bottom: 12px;
+  width: 80px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2.8px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 .intro__content-scroll-line{
    width: 2px;
