@@ -34,7 +34,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+  .portrait {
+    height: 100%;
+  }
   .portrait-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
     padding: 0 40px;
   }
   .portrait__slider-nickname-container {
