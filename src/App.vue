@@ -42,6 +42,6 @@ export default {
     text-align: left;
     text-transform: uppercase;
     font-weight: 700;
-    margin: 0;
   }
+
 </style>
