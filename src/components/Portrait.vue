@@ -18,6 +18,12 @@
         </div>
       </div>
     </div>
+    <div class="select__content-scroll">
+      <p class="select__content-scroll-text">
+        Scroll to<br> explore
+   </p>
+      <div class="select__content-scroll-line"></div>
+    </div>
   </div>
 </template>
 
@@ -36,9 +42,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
   h1, h2, p {
     margin: 0;
   }
+  h1 {
+    line-height: 0.91;
+  }
+
   .portrait {
     height: 100%;
     background: url("../assets/img/Portrait_lefur4.png") center;
@@ -70,11 +81,33 @@ export default {
     width: 18px;
     height: 2px;
     margin-right: 20px;
-    background-color: #ffffff;
+    background-color: $white;
   }
   .portrait__slider-subtitle {
     font-size: 14px;
     font-style: normal;
     line-height: 1.5;
+  }
+
+  .select__content-scroll{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    padding-left: 40px;
+    width: 100%;
+    text-align: left;
+  }
+  .select__content-scroll-text{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2.8px;
+    color: $white;
+    margin-bottom: 12px;
+  }
+  .select__content-scroll-line{
+    width: 2px;
+    height: 75px;
+    background-color: $white;
   }
 </style>
