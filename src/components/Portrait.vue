@@ -37,13 +37,16 @@
         </div>
           <div class="portrait__titles">
             <h3>4 titres</h3>
-            <p class="portrait__titles-title">Lorem Ipsum</p>
-            <p class="portrait__titles-title">Lorem Ipsum</p>
-            <p class="portrait__titles-title">Lorem Ipsum</p>
-            <p class="portrait__titles-title">Lorem Ipsum</p>
+            <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent en Saut en longueur</p>
+            <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent au 100m</p>
+            <p class="portrait__titles-title">JO de Londres 2012, Médaille D’or sur 100 mètres</p>
+            <p class="portrait__titles-title">JO de Londres 2012, Médaille D’argent sur 200 mètres</p>
           </div>
           <div class="portrait__records">
             <h3>3 records mondiaux</h3>
+            <p class="portrait__records-record">Record du monde du saut en longueur à Doha (5,74m)</p>
+            <p class="portrait__records-record">Une médaille d’or au 400m en établissant un nouveau record (59"27)</p>
+            <p class="portrait__records-record">Jeux paralympiques de Rio, record du monde sur 400 mètres</p>
           </div>
       </div>
     </div>
@@ -173,8 +176,9 @@ export default {
     margin-bottom: 2px;
   }
 
-  .portrait__titles-title {
-    font-size: 14px;
+  .portrait__titles-title,
+  .portrait__records-record{
+    font-size: 12px;
     font-weight: 300;
     line-height: 1.4;
   }
