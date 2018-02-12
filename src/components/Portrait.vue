@@ -52,6 +52,18 @@
         </div>
         <div class="portrait__part1">
           <h3>La victoire</h3>
+          <p>
+            On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012. 
+          </p>
+          <div class="portrait__part1-video">
+            <div class="portrait__part1-video-youtube">
+              <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
+            </div>
+          </div>
+          <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre la ligne d’arrivée mais est persuadée d’avoir fini en seconde position.</p>
+          <p class="portrait__part-text">Elle retient son souffle…</p>
+          <p class="portrait__part-text">Le tableau affiche le résultat…</p>
+          <p class="portrait__part-text">Elle est première.</p>
         </div>
       </div>
     </div>
@@ -198,5 +210,32 @@ export default {
 
   .portrait__part1 {
     margin-bottom: 215px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1.3;
   }
+
+  .portrait__part1-video {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .portrait__part1-video-youtube {
+    position: relative;
+    background-color: $white;
+    width: 246px;
+    height: 138px;
+  }
+  .portrait__part1-video-youtube-controls {
+    position: absolute;
+    left: -30px;
+    bottom: -15px;
+  }
+
+  .portrait__part-text {
+    margin-bottom: 40px;
+  }
+
 </style>
