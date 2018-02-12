@@ -3,51 +3,56 @@
     <portrait-toolbar></portrait-toolbar>
     <div class="overlay">
       <div class="portrait-container">
-        <div class="portrait__slider-title">
-          <div class="portrait__slider-nickname-container is-hidden">
-            <div class="dash is-hidden"></div>
-            <span class="portrait__slider-nickname is-hidden">&laquo Le guépard &raquo</span>
-          </div>
-          <h1>
-            Marie-Amélie Le Fur
-          </h1>
-          <div class="portrait-quote">"« Fais de ta vie un rêve et d’un rêve une réalité »</div>
-          <div class="dash"></div>
-        </div>
-        <div class="portrait__slider-subtitle">
-          <p>Longueur, 100 m, 200 m, 400 m <p>
-          <p>Athlétisme</p>
-        </div>
-        <div class="portrait__medal">
-          <h3>médailles mondiales</h3>
-          <div class="portrait__medal-medals">
-            <div class="portrait__medal-medals-group">
-              <p class="medals-nb">7</p>
-              <img src="../assets/img/medal-gold.png" alt="7 gold medals">
+        <div class="portrait__intro">
+          <div class="portrait__slider-title">
+            <div class="portrait__slider-nickname-container is-hidden">
+              <div class="dash is-hidden"></div>
+              <span class="portrait__slider-nickname is-hidden">&laquo Le guépard &raquo</span>
             </div>
-            <div class="portrait__medal-medals-group">
-              <p class="medals-nb">11</p>
-              <img src="../assets/img/medal-silver.png" alt="11 silver medals">
-            </div>
-            <div class="portrait__medal-medals-group">
-              <p class="medals-nb">2</p>
-              <img src="../assets/img/medal-bronz.png" alt="2 bronz medals">
+            <h1>
+              Marie-Amélie Le Fur
+            </h1>
+            <div class="portrait-quote">"« Fais de ta vie un rêve et d’un rêve une réalité »</div>
+            <div class="dash"></div>
+          </div>
+          <div class="portrait__slider-subtitle">
+            <p>Longueur, 100 m, 200 m, 400 m <p>
+            <p>Athlétisme</p>
+          </div>
+          <div class="portrait__medal">
+            <h3>médailles mondiales</h3>
+            <div class="portrait__medal-medals">
+              <div class="portrait__medal-medals-group">
+                <p class="medals-nb">7</p>
+                <img src="../assets/img/medal-gold.png" alt="7 gold medals">
+              </div>
+              <div class="portrait__medal-medals-group">
+                <p class="medals-nb">11</p>
+                <img src="../assets/img/medal-silver.png" alt="11 silver medals">
+              </div>
+              <div class="portrait__medal-medals-group">
+                <p class="medals-nb">2</p>
+                <img src="../assets/img/medal-bronz.png" alt="2 bronz medals">
+              </div>
             </div>
           </div>
+            <div class="portrait__titles">
+              <h3>4 titres</h3>
+              <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent en Saut en longueur</p>
+              <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent au 100m</p>
+              <p class="portrait__titles-title">JO de Londres 2012, Médaille D’or sur 100 mètres</p>
+              <p class="portrait__titles-title">JO de Londres 2012, Médaille D’argent sur 200 mètres</p>
+            </div>
+            <div class="portrait__records">
+              <h3>3 records mondiaux</h3>
+              <p class="portrait__records-record">Record du monde du saut en longueur à Doha (5,74m)</p>
+              <p class="portrait__records-record">Une médaille d’or au 400m en établissant un nouveau record (59"27)</p>
+              <p class="portrait__records-record">Jeux paralympiques de Rio, record du monde sur 400 mètres</p>
+            </div>
         </div>
-          <div class="portrait__titles">
-            <h3>4 titres</h3>
-            <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent en Saut en longueur</p>
-            <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent au 100m</p>
-            <p class="portrait__titles-title">JO de Londres 2012, Médaille D’or sur 100 mètres</p>
-            <p class="portrait__titles-title">JO de Londres 2012, Médaille D’argent sur 200 mètres</p>
-          </div>
-          <div class="portrait__records">
-            <h3>3 records mondiaux</h3>
-            <p class="portrait__records-record">Record du monde du saut en longueur à Doha (5,74m)</p>
-            <p class="portrait__records-record">Une médaille d’or au 400m en établissant un nouveau record (59"27)</p>
-            <p class="portrait__records-record">Jeux paralympiques de Rio, record du monde sur 400 mètres</p>
-          </div>
+        <div class="portrait__part1">
+          <h3>La victoire</h3>
+        </div>
       </div>
     </div>
     <div class="overlay__bottom"></div>
@@ -133,7 +138,7 @@ export default {
 
   .select__content-scroll{
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-left: 40px;
     width: 100%;
@@ -189,5 +194,9 @@ export default {
     width: 100%;
     height: 215px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
+
+  .portrait__part1 {
+    margin-bottom: 215px;
   }
 </style>
