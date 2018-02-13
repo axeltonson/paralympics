@@ -50,6 +50,7 @@
               <p class="portrait__records-record">Jeux paralympiques de Rio, record du monde sur 400 mètres</p>
             </div>
         </div>
+
         <div class="portrait__part1">
           <h3>La victoire</h3>
           <p>
@@ -64,9 +65,27 @@
           <p class="portrait__part-text">Elle retient son souffle…</p>
           <p class="portrait__part-text">Le tableau affiche le résultat…</p>
           <p class="portrait__part-text">Elle est première.</p>
+          </div>
+        <div class="portrait__part1-image">
+          <div class="overlay-img"></div>
+        </div>
+        <div class="portrait__part1-end">
+          <p class="portrait__part-text">Qu’est ce qui fait d’elle une femme hors du commun?</p>
+          <p class="portrait__part-text">Le tableau affiche le résultat…</p>
         </div>
       </div>
     </div>
+
+    <div class="portrait__part2">
+      <h3>L'obstacle</h3>
+      <p class="portrait__part-text">
+        Le 31 mars 2004, elle a un accident de scooter qui lui vaudra d’être amputée de la jambe gauche sous le genou.
+      </p>
+      <p class="portrait__part-text">
+Pour Marie-Amélie c’est sa force mentale et son tempérament de battante qui la pousseront à faire preuve de <span class="link-bold">résilience</span> et à accepter malgré le traumatisme de la situation la transformation du temps.
+      </p>
+    </div>
+
     <div class="overlay__bottom"></div>
     <div class="select__content-scroll">
       <p class="select__content-scroll-text">
@@ -106,6 +125,10 @@ export default {
     margin: 20px 0 10px;
   }
 
+  .link-bold {
+    font-weight: bold;
+  }
+
   .is-hidden {
     display: none;
   }
@@ -113,6 +136,11 @@ export default {
     height: 100%;
     background: url("../assets/img/Portrait_lefur4.png") center;
     background-size: cover;
+  }
+
+  .portrait__intro {
+    padding: 0 40px;
+    margin-bottom: 50px;
   }
 
   .overlay {
@@ -124,7 +152,6 @@ export default {
     flex-direction: column;
     justify-content: center;
     min-height: 100%;
-    padding: 0 40px;
   }
   .portrait__slider-nickname-container {
     display: flex;
@@ -195,7 +222,7 @@ export default {
 
   .portrait__titles-title,
   .portrait__records-record{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.4;
   }
@@ -208,8 +235,10 @@ export default {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
 
-  .portrait__part1 {
-    margin-bottom: 215px;
+  .portrait__part1,
+  .portrait__part1-end,
+  .portrait__part2 {
+    padding: 0 40px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 22px;
     font-weight: 200;
@@ -236,6 +265,18 @@ export default {
 
   .portrait__part-text {
     margin-bottom: 40px;
+  }
+
+  .portrait__part1-image {
+    width: 100%;
+    height: 667px;
+    background: url('../assets/img/malf-tpe-site.jpg') center no-repeat;
+    background-size: 400%;
+  }
+  .overlay-img{
+    height: 100%;
+    width: 100%;
+  background-image: radial-gradient(circle at 54% 30%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 26%, rgba(7, 7, 7, 0.67) 70%, #070707);
   }
 
 </style>
