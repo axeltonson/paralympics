@@ -1,6 +1,7 @@
 <template>
 <transition>
   <div class="vue select">
+    <menu-top></menu-top>
      <div class="select__content">
         <div class="select__content-items">
 
@@ -10,9 +11,7 @@
                  <div class="dash"></div>
                  <span class="select__item-nickname">&laquo Le guépard &raquo</span>
                </div>
-               <h1>
-                 Marie-Amélie Le Fur
-               </h1>
+               <h1>Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
                <p>Longueur, 100 m, 200 m, 400 m <p>
@@ -25,9 +24,7 @@
                  <div class="dash"></div>
                  <span class="select__item-nickname">&laquo Le guépard &raquo</span>
                </div>
-               <h1>
-                 Marie-Amélie Le Fur
-               </h1>
+               <h1>Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
                <p>Longueur, 100 m, 200 m, 400 m <p>
@@ -40,9 +37,7 @@
                  <div class="dash"></div>
                  <span class="select__item-nickname">&laquo Le guépard &raquo</span>
                </div>
-               <h1>
-                 Marie-Amélie Le Fur
-               </h1>
+               <h1>Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
                <p>Longueur, 100 m, 200 m, 400 m <p>
@@ -63,10 +58,14 @@
 </template>
 
 <script>
+import MenuTop from '@/components/Menu'
 export default {
   name: 'Select',
   data () {
     return {}
+  },
+  components: {
+    MenuTop
   },
   methods: {
     selectAnim: function (event) {
@@ -173,13 +172,13 @@ body{
 .select__content-items{
    position: relative;
    height: 100%;
-   width: 80%;
+   width: 100%;
 }
 
 .select__item{
    position: absolute;
    z-index: 1;
-   bottom: 20%;
+   bottom: 25%;
    left: 0;
    opacity: 0.2;
    transition: 0.7s;
