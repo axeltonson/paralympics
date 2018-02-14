@@ -2,6 +2,7 @@
   <div class="portrait">
     <portrait-toolbar></portrait-toolbar>
     <div class="overlay">
+
       <div class="portrait-container">
         <div class="portrait__intro">
           <div class="portrait__slider-title">
@@ -51,39 +52,106 @@
             </div>
         </div>
 
-        <div class="portrait__part1">
-          <h3>La victoire</h3>
-          <p>
-            On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012. 
-          </p>
-          <div class="portrait__part1-video">
-            <div class="portrait__part1-video-youtube">
-              <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
+          <div class="portrait__part1">
+            <h3>La victoire</h3>
+            <p>
+              On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012. 
+            </p>
+            <div class="portrait__part1-video">
+              <div class="portrait__part1-video-youtube">
+                <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
+              </div>
+            </div>
+            <div class="portrait__part-text-block">
+              <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre la ligne d’arrivée mais est persuadée d’avoir fini en seconde position.</p>
+              <p class="portrait__part-text">Elle retient son souffle…</p>
+              <p class="portrait__part-text">Le tableau affiche le résultat…</p>
+              <p class="portrait__part-text">Elle est première.</p>
             </div>
           </div>
-          <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre la ligne d’arrivée mais est persuadée d’avoir fini en seconde position.</p>
-          <p class="portrait__part-text">Elle retient son souffle…</p>
-          <p class="portrait__part-text">Le tableau affiche le résultat…</p>
-          <p class="portrait__part-text">Elle est première.</p>
-          </div>
-        <div class="portrait__part1-image">
-          <div class="overlay-img"></div>
-        </div>
-        <div class="portrait__part1-end">
+      </div>
+
+      <div class="portrait__part1-image">
+        <div class="overlay-img"></div>
+      </div>
+
+      <div class="portrait-container">
+        <div class="portrait__part-text-block">
           <p class="portrait__part-text">Qu’est ce qui fait d’elle une femme hors du commun?</p>
           <p class="portrait__part-text">Le tableau affiche le résultat…</p>
         </div>
-      </div>
-    </div>
 
-    <div class="portrait__part2">
-      <h3>L'obstacle</h3>
-      <p class="portrait__part-text">
-        Le 31 mars 2004, elle a un accident de scooter qui lui vaudra d’être amputée de la jambe gauche sous le genou.
-      </p>
-      <p class="portrait__part-text">
-Pour Marie-Amélie c’est sa force mentale et son tempérament de battante qui la pousseront à faire preuve de <span class="link-bold">résilience</span> et à accepter malgré le traumatisme de la situation la transformation du temps.
-      </p>
+        <div class="portrait__part2">
+          <h3>L'obstacle</h3>
+          <p class="portrait__part-text">
+            Le 31 mars 2004, elle a un accident de scooter qui lui vaudra d’être amputée de la jambe gauche sous le genou.
+          </p>
+          <p class="portrait__part-text">
+            Pour Marie-Amélie c’est sa force mentale et son tempérament de battante qui la pousseront à faire preuve de <span class="link-bold">résilience</span> et à accepter malgré le traumatisme de la situation la transformation du temps.
+          </p>
+        </div>
+      </div>
+
+      <div class="portrait__part2-image">
+        <div class="overlay-img"></div>
+      </div>
+
+      <div class="portrait-container">
+        <div class="portrait__part-text-block">
+          <p class="portrait__part-text">Dès le lendemain de son amputation elle pense à la légèreté qu’elle ressentait avant dans l’athlétisme et recommence à courir 4 mois plus tard, le 31 juillet 2004 pour la première fois avec sa lame.
+          </p>
+          <p class="portrait__part-text">
+            Le besoin de vivre, de rebondir chez Amélie est quasi immédiat.
+          </p>
+        </div>
+
+        <div class="portrait__part3">
+          <h3>Le guépard</h3>
+          <div class="portrait__part-text-block">
+            <p class="portrait__part-text">
+              Les ressentis au niveau de la voûte plantaire, des flexions de la cheville, des tensions musculaires dans la jambe, des pressions au niveau du genou, n’existent plus d’un côté chez Amélie Le Fur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portrait__part3-image">
+        <div class="overlay-img"></div>
+      </div>
+
+      <div class="portrait-container">
+          <div class="portrait__part-text-block">
+            <p class="portrait__part-text">
+              Depuis 13 ans elle apprivoise sa <span class="link-bold">lame en carbone</span> bien aiguisée.
+            </p>
+            <p class="portrait__part-text">
+              <span class="link-bold">Dompter sa prothèse</span> est un combat quotidien.
+            </p>
+          </div>
+      </div>
+
+      <div class="portrait__instamoment"></div>
+
+      <div class="portrait-container">
+        <div class="portrait__part-text-block">
+          <p class="portrait__part-text">
+            À travers son histoire et ses réussites sportives, elle espère <span class="link-bold">promouvoir le handisport</span> afin que tout le monde connaisse ces pratiques et puissent y accéder plus librement et facilement.
+            </p>
+        </div>
+        <div class="portrait__part-text-block-end">
+          <p class="portrait__part-text">
+            Marie-Amélie Le Fur n’a qu’une seule devise :
+          </p>
+          <p class="portrait__part-text">
+            « Fais de ta vie un rêve et d’un rêve une réalité »
+          </p>
+        </div>
+      </div>
+
+      <div class="portrait__part4-image">
+        <div class="overlay-img"></div>
+      </div>
+
     </div>
 
     <div class="overlay__bottom"></div>
@@ -139,7 +207,6 @@ export default {
   }
 
   .portrait__intro {
-    padding: 0 40px;
     margin-bottom: 50px;
   }
 
@@ -148,10 +215,15 @@ export default {
     background-image: linear-gradient(rgba(7, 7, 7, 0.6), rgba(7, 7, 7, 0.6)), radial-gradient(circle at 53% 29%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 26%, rgba(7, 7, 7, 0.67) 70%, #070707);
   }
   .portrait-container {
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100%;
+    padding: 0 40px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1.3;
   }
   .portrait__slider-nickname-container {
     display: flex;
@@ -235,16 +307,6 @@ export default {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
 
-  .portrait__part1,
-  .portrait__part1-end,
-  .portrait__part2 {
-    padding: 0 40px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 22px;
-    font-weight: 200;
-    line-height: 1.3;
-  }
-
   .portrait__part1-video {
     margin-top: 20px;
     margin-bottom: 60px;
@@ -276,7 +338,39 @@ export default {
   .overlay-img{
     height: 100%;
     width: 100%;
-  background-image: radial-gradient(circle at 54% 30%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 26%, rgba(7, 7, 7, 0.67) 70%, #070707);
+  background-image: linear-gradient(rgba(7, 7, 7, 0.21), rgba(7, 7, 7, 0.21)), radial-gradient(circle at 42% 65%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 47%, rgba(7, 7, 7, 0.67) 83%, #070707);
   }
 
+  .portrait__part2-image {
+    opacity: 0.89;
+    width: 100%;
+    height: 467px;
+    background: url('../assets/img/jo20161608.jpg') 25% -300px no-repeat;
+  }
+
+  .portrait__part3-image {
+    opacity: 0.89;
+    width: 100%;
+    height: 686px;
+    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio.jpg') 35% -400px no-repeat;
+  }
+
+  .portrait__instamoment {
+    width: 100%;
+    height: 280px;
+    opacity: 0.87;
+    background-color: #8a3ab9;
+  }
+
+  .portrait__part-text-block-end {
+    margin-top: 170px;
+  }
+
+  .portrait__part4-image {
+    opacity: 0.8;
+    width: 100%;
+    height: 467px;
+    background: url('../assets/img/2016-rio-paralympics-day-5-2.jpg') 25% no-repeat;
+    background-size: 300%;
+  }
 </style>
