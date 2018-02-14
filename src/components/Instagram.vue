@@ -3,7 +3,7 @@
 *** HOW TO USE ***
 
 1:  import Instagram from '@/components/Instagram'
-2:  <instagram :url='"https://api.instagram.com/oembed?url=http://instagr.am/p/fA9uwTtkSN/"'></instagram>
+2:  <instagram :url='"https://api.instagram.com/oembed?url=https://www.instagram.com/p/BQ0UzPRFvsE/"'></instagram>
 
 -->
 
