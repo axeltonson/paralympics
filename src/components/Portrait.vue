@@ -158,7 +158,7 @@
     <div class="select__content-scroll">
       <p class="select__content-scroll-text">
         Scroll to<br> explore
-   </p>
+    </p>
       <div class="select__content-scroll-line"></div>
     </div>
   </div>
@@ -220,7 +220,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     padding: 0 40px;
-    color: rgba(255, 255, 255, 0.7);
+    color: $white;
     font-size: 22px;
     font-weight: 200;
     line-height: 1.3;
@@ -270,7 +270,7 @@ export default {
   }
 
   .portrait-quote {
-    color: rgba(255,255,255, 0.6);
+    color: $white;
     font-size: 24px;
     font-weight: 200;
     font-style: italic;
@@ -338,7 +338,7 @@ export default {
   .overlay-img{
     height: 100%;
     width: 100%;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.21), rgba(7, 7, 7, 0.21)), radial-gradient(circle at 42% 65%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 47%, rgba(7, 7, 7, 0.67) 83%, #070707);
+    background-image: linear-gradient(rgba(7, 7, 7, 0.21), rgba(7, 7, 7, 0.21)), radial-gradient(circle at 42% 65%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 47%, rgba(7, 7, 7, 0.67) 83%, #070707);
   }
 
   .portrait__part2-image {
