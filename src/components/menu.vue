@@ -110,6 +110,16 @@ h1.hmenu__main-title{
 .hmenu__toggle-menu-item{
    margin-top: 40px;
    font-size: 30px;
+   list-style-type: none;
+   font-weight: bold;
+}
+.hmenu__toggle-menu-item a{
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.8;
+}
+.hmenu__toggle-menu-item a:hover{
+  opacity: 1;
 }
 
 </style>
