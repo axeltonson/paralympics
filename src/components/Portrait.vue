@@ -1,6 +1,6 @@
 <template>
   <div class="portrait">
-    <portrait-toolbar></portrait-toolbar>
+    <menu-top></menu-top>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>

@@ -13,6 +13,7 @@
       </div>
       <div class="hmenu__toggle">
          <ul class="hmenu__toggle-menu">
+            <li class="hmenu__toogle-menu-title">Menu</li>
             <li class="hmenu__toggle-menu-item"><router-link to="Select">Les héros</router-link></li>
             <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:1">Marie-Amélie Lefur</router-link></li>
             <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:2">Michael Jeremiasz</router-link></li>
@@ -43,7 +44,7 @@ export default {
 
 .hmenu{
    position: fixed;
-   z-index: 12;
+   z-index: 101;
    top: 0;
    left: 0;
    width: 100%;
@@ -67,6 +68,10 @@ h1.hmenu__main-title{
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  transition: 0.3s;
+}
+.active .hmenu__main-title{
+  opacity: 0;
 }
 .hmenu__main-button{
   padding: 0 15px;
@@ -87,9 +92,12 @@ h1.hmenu__main-title{
 .hmenu__main-button:last-child{
    margin-bottom: 0;
 }
-.active .hmenu__main-button span{width: 30px; border-radius: 2px; transition: 0.2s}
+/* .active .hmenu__main-button span{width: 30px; border-radius: 2px; transition: 0.2s}
 .active .hmenu__main-button span + span{width: 38px; transition: 0.3s}
-.active .hmenu__main-button span + span + span{width: 23px; transition: 0.1s}
+.active .hmenu__main-button span + span + span{width: 23px; transition: 0.1s} */
+.active .hmenu__main-button span{width: 25px; height: 3px; border-radius: 2px; transition: 0.2s; transform: rotate(-45deg); transform-origin: right;}
+.active .hmenu__main-button span + span{width: 3px; transform: rotate(-45deg); margin-right: 8px;}
+.active .hmenu__main-button span + span + span{width: 25px; transform: rotate(45deg); transform-origin: right; margin-right: 0;}
 
 .hmenu__toggle{
   position: absolute;
@@ -98,7 +106,7 @@ h1.hmenu__main-title{
   left: 0;
   width: 100%;
   height: 0vh;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.85);
   overflow: hidden;
   transition: 0.4s;
 }
@@ -108,6 +116,14 @@ h1.hmenu__main-title{
 .hmenu__toggle-menu{
   padding: 60px 50px;
   text-align: center;
+}
+.hmenu__toogle-menu-title{
+  text-transform: uppercase;
+  font-weight: bold;
+  list-style-type: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 70px;
 }
 .hmenu__toggle-menu-item{
   margin: 30px 0;

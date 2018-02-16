@@ -120,8 +120,9 @@ export default {
       this.$router.push('/intro')
     },
     scrollDown: function () {
+      var heroId = document.getElementById('selectHero').getAttribute('h_id')
       console.log('scrolling down 2')
-      this.$router.push('/')
+      this.$router.push('/Portrait/:' + heroId)
     },
     clickEvent: function (event) {
       console.log('click')

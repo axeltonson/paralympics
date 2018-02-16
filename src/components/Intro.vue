@@ -19,8 +19,6 @@
 </template>
 
 <script>
-var x = 0
-var y = 0
 export default {
   name: 'Intro',
   data () {
@@ -29,24 +27,14 @@ export default {
   methods: {
     handleScroll: function (event) {
       if (event.deltaY < 0) {
-        x += 1
-        y = 0
-        console.log(x)
-        if (x > 1) {
-          x = 0
-          window.removeEventListener('wheel', this.handleScroll)
-          this.scrollUp()
-        }
+        console.log('scrolling up')
+        window.removeEventListener('wheel', this.handleScroll)
+        this.scrollUp()
       }
       if (event.deltaY > 0) {
-        y += 1
-        x = 0
-        console.log(y)
-        if (y > 1) {
-          y = 0
-          window.removeEventListener('wheel', this.handleScroll)
-          this.scrollDown()
-        }
+        console.log('scrolling down')
+        window.removeEventListener('wheel', this.handleScroll)
+        this.scrollDown()
       }
     },
     scrollUp: function () {
