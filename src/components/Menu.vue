@@ -1,28 +1,26 @@
 <template>
-
-   <div class="hmenu" id="hmenu">
-      <div class="hmenu__main">
-         <h1 class="hmenu__main-title">
-            The Real Heroes
-         </h1>
-         <div class="hmenu__main-button" v-on:click="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-         </div>
+  <div class="hmenu" id="hmenu">
+    <div class="hmenu__main">
+      <h1 class="hmenu__main-title">
+        The Real Heroes
+      </h1>
+      <div class="hmenu__main-button" @click="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="hmenu__toggle">
-         <ul class="hmenu__toggle-menu">
-            <li class="hmenu__toogle-menu-title">Menu</li>
-            <li class="hmenu__toggle-menu-item"><router-link to="Select">Les héros</router-link></li>
-            <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:1">Marie-Amélie Lefur</router-link></li>
-            <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:2">Michael Jeremiasz</router-link></li>
-            <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:3">Sandrine Martinet-Auriès</router-link></li>
-            <li class="hmenu__toggle-menu-item"><router-link to="About">A propos</router-link></li>
-         </ul>
-      </div>
-   </div>
-
+    </div>
+    <div class="hmenu__toggle">
+      <ul class="hmenu__toggle-menu">
+        <li class="hmenu__toogle-menu-title">Menu</li>
+        <li class="hmenu__toggle-menu-item"><router-link to="Select">Les héros</router-link></li>
+        <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:1">Marie-Amélie Lefur</router-link></li>
+        <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:2">Michael Jeremiasz</router-link></li>
+        <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:3">Sandrine Martinet-Auriès</router-link></li>
+        <li class="hmenu__toggle-menu-item"><router-link to="About">A propos</router-link></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -43,24 +41,24 @@ export default {
 <style lang="scss" scoped>
 
 .hmenu{
-   position: fixed;
-   z-index: 101;
-   top: 0;
-   left: 0;
-   width: 100%;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .hmenu__main{
-   position: absolute;
-   z-index: 12;
-   top: 0;
-   left: 0;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   padding: 20px;
-   box-sizing: border-box;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 h1.hmenu__main-title{
   font-size: 20px;
@@ -90,7 +88,7 @@ h1.hmenu__main-title{
   transition: 0.3s;
 }
 .hmenu__main-button:last-child{
-   margin-bottom: 0;
+  margin-bottom: 0;
 }
 /* .active .hmenu__main-button span{width: 30px; border-radius: 2px; transition: 0.2s}
 .active .hmenu__main-button span + span{width: 38px; transition: 0.3s}
@@ -134,9 +132,6 @@ h1.hmenu__main-title{
 .hmenu__toggle-menu-item a{
   text-decoration: none;
   color: #ffffff;
-}
-.hmenu__toggle-menu-item a:hover{
-
 }
 
 .hmenu__toggle-menu-subitem{

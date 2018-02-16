@@ -1,7 +1,6 @@
 <template>
   <div class="portrait">
     <portrait-header></portrait-header>
-    <menu-top></menu-top>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -10,7 +9,7 @@
           <div class="portrait__slider-title">
             <div class="portrait__slider-nickname-container is-hidden">
               <div class="dash is-hidden"></div>
-              <span class="portrait__slider-nickname is-hidden">&laquo Le guépard &raquo</span>
+              <span class="portrait__slider-nickname is-hidden">&laquo; Le guépard &raquo;</span>
             </div>
             <h1>
               Marie-Amélie Le Fur
@@ -150,19 +149,15 @@
 
 <script>
 import PortraitHeader from '@/components/PortraitHeader'
-import MenuTop from '@/components/menu'
-
 export default {
   name: 'Portrait',
   components: {
-    PortraitHeader,
-    MenuTop
+    PortraitHeader
   },
   data () {
     return {}
   }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

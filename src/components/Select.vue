@@ -2,55 +2,55 @@
 <transition>
   <div class="vue select" id="selectHero" h_id="1">
     <menu-top></menu-top>
-     <div class="select__content">
+      <div class="select__content">
         <div class="select__content-items">
 
-           <div class="select__item" id="selectLeft" v-on:click="selectAnim">
-             <div class="select__item-title">
-               <div class="select__item-nickname-container">
-                 <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
-               </div>
-               <h1>Marie-Amélie Le Fur</h1>
-             </div>
-             <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m <p>
-               <p>Athlétisme</p>
-             </div>
-           </div>
-           <div class="select__item" id="selectCenter" v-on:click="selectAnim">
-             <div class="select__item-title">
-               <div class="select__item-nickname-container">
-                 <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
-               </div>
-               <h1>Marie-Amélie Le Fur</h1>
-             </div>
-             <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m <p>
-               <p>Athlétisme</p>
-             </div>
-           </div>
-           <div class="select__item" id="selectRight" v-on:click="selectAnim">
-             <div class="select__item-title">
-               <div class="select__item-nickname-container">
-                 <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
-               </div>
-               <h1>Marie-Amélie Le Fur</h1>
-             </div>
-             <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m <p>
-               <p>Athlétisme</p>
-             </div>
-           </div>
+          <div class="select__item" id="selectLeft" @click="selectAnim">
+            <div class="select__item-title">
+              <div class="select__item-nickname-container">
+                <div class="dash"></div>
+                <span class="select__item-nickname">&laquo; Le guépard &raquo;</span>
+              </div>
+              <h1>Marie-Amélie Le Fur</h1>
+            </div>
+            <div class="select__item-subtitle">
+              <p>Longueur, 100 m, 200 m, 400 m <p>
+              <p>Athlétisme</p>
+            </div>
+          </div>
+          <div class="select__item" id="selectCenter" @click="selectAnim">
+            <div class="select__item-title">
+              <div class="select__item-nickname-container">
+                <div class="dash"></div>
+                <span class="select__item-nickname">&laquo; Le guépard &raquo;</span>
+              </div>
+              <h1>Marie-Amélie Le Fur</h1>
+            </div>
+            <div class="select__item-subtitle">
+              <p>Longueur, 100 m, 200 m, 400 m <p>
+              <p>Athlétisme</p>
+            </div>
+          </div>
+          <div class="select__item" id="selectRight" @click="selectAnim">
+            <div class="select__item-title">
+              <div class="select__item-nickname-container">
+                <div class="dash"></div>
+                <span class="select__item-nickname">&laquo; Le guépard &raquo;</span>
+              </div>
+              <h1>Marie-Amélie Le Fur</h1>
+            </div>
+            <div class="select__item-subtitle">
+              <p>Longueur, 100 m, 200 m, 400 m <p>
+              <p>Athlétisme</p>
+            </div>
+          </div>
 
         </div>
         <div class="select__content-scroll">
-           <p class="select__content-scroll-text">
+          <p class="select__content-scroll-text">
             Scroll to<br> explore
-           </p>
-           <div class="select__content-scroll-line"></div>
+          </p>
+          <div class="select__content-scroll-line"></div>
         </div>
     </div>
   </div>
@@ -58,14 +58,14 @@
 </template>
 
 <script>
-import MenuTop from '@/components/menu'
+import MenuTop from '@/components/Menu'
 export default {
   name: 'Select',
   data () {
     return {}
   },
   components: {
-    'menu-top': MenuTop
+    MenuTop
   },
   methods: {
     selectAnim: function (event) {
@@ -138,14 +138,14 @@ export default {
 <style lang="scss">
 
 body{
-   height: 100vh;
-   margin: 0;
-   padding: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 #app, .vue{
-   height: 100%;
-   width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .vue{
@@ -155,89 +155,89 @@ body{
 /* FIN A SUPPRIMER */
 
 .select{
-   width: 100%;
-   height: 100%;
-   background-color: #000000;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
 }
 
 .select__content{
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 300px;
-   height: 100%;
-   margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .select__content-scroll{
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
 }
 .select__content-scroll-text{
-   font-size: 14px;
-   color: #ffffff;
-   margin-bottom: 12px;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 .select__content-scroll-line{
-   width: 2px;
-   height: 75px;
-   background-color: #ffffff;
+  width: 2px;
+  height: 75px;
+  background-color: #ffffff;
 }
 
 .select__content-items{
-   position: relative;
-   height: 100%;
-   width: 100%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .select__item{
-   position: absolute;
-   z-index: 1;
-   bottom: 25%;
-   left: 0;
-   opacity: 0.2;
-   transition: 0.7s;
+  position: absolute;
+  z-index: 1;
+  bottom: 25%;
+  left: 0;
+  opacity: 0.2;
+  transition: 0.7s;
 }
 #selectLeft{
-   transform: perspective(400px) translate3d(-80px, 0px, -100px);
+  transform: perspective(400px) translate3d(-80px, 0px, -100px);
 }
 /* #selectLeft img{
-   background-color: yellow;
+  background-color: yellow;
 } */
 #selectCenter{
-   z-index: 10;
-   transform: translate3d(0, 0, 0);
-   opacity: 1;
+  z-index: 10;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 #selectRight{
-   transform: perspective(400px) translate3d(80px, 0px, -100px);
+  transform: perspective(400px) translate3d(80px, 0px, -100px);
 }
 /* #selectRight img{
-   background-color: green;
+  background-color: green;
 } */
 
 .select__item-image{
-   position: absolute;
-   top: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 100px;
-   height: 100px;
-   background-color: red;
-   border: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 0;
 }
 .select__item-content{
-   position: absolute;
-   top: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 100px;
-   color: white;
-   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  color: white;
+  text-align: center;
 }
 
 /* Enter and Leave transitions */
