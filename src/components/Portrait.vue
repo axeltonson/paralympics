@@ -1,10 +1,11 @@
 <template>
   <div class="portrait">
     <portrait-toolbar></portrait-toolbar>
-    <div class="overlay">
-
+    <div class="portrait__intro-bg">
+      <div class="portrait__intro-bg-overlay"></div>
+    </div>
       <div class="portrait-container">
-        <div class="portrait__intro">
+        <div class="portrait__intro is-scrolling">
           <div class="portrait__slider-title">
             <div class="portrait__slider-nickname-container is-hidden">
               <div class="dash is-hidden"></div>
@@ -25,15 +26,15 @@
             <div class="portrait__medal-medals">
               <div class="portrait__medal-medals-group">
                 <p class="medals-nb">7</p>
-                <img src="../assets/img/medal-gold.png" alt="7 gold medals">
+                <img src="../assets/img/m-daille-gold.svg" alt="7 médailles d'or">
               </div>
               <div class="portrait__medal-medals-group">
                 <p class="medals-nb">11</p>
-                <img src="../assets/img/medal-silver.png" alt="11 silver medals">
+                <img src="../assets/img/m-daille-silver.svg" alt="11 médailles d'argent">
               </div>
               <div class="portrait__medal-medals-group">
                 <p class="medals-nb">2</p>
-                <img src="../assets/img/medal-bronz.png" alt="2 bronz medals">
+                <img src="../assets/img/m-daille-bronze.svg" alt="2 médailles de bronze">
               </div>
             </div>
           </div>
@@ -71,9 +72,7 @@
           </div>
       </div>
 
-      <div class="portrait__part1-image">
-        <div class="overlay-img"></div>
-      </div>
+      <div class="portrait__part1-image"></div>
 
       <div class="portrait-container">
         <div class="portrait__part-text-block">
@@ -92,9 +91,7 @@
         </div>
       </div>
 
-      <div class="portrait__part2-image">
-        <div class="overlay-img"></div>
-      </div>
+      <div class="portrait__part2-image"></div>
 
       <div class="portrait-container">
         <div class="portrait__part-text-block">
@@ -115,9 +112,7 @@
         </div>
       </div>
 
-      <div class="portrait__part3-image">
-        <div class="overlay-img"></div>
-      </div>
+      <div class="portrait__part3-image"></div>
 
       <div class="portrait-container">
           <div class="portrait__part-text-block">
@@ -148,12 +143,9 @@
         </div>
       </div>
 
-      <div class="portrait__part4-image">
-        <div class="overlay-img"></div>
-      </div>
+      <div class="portrait__part4-image"></div>
 
-    </div>
-
+    <div class="overlay__top"></div>
     <div class="overlay__bottom"></div>
     <div class="select__content-scroll">
       <p class="select__content-scroll-text">
@@ -200,30 +192,46 @@ export default {
   .is-hidden {
     display: none;
   }
+  .portrait__intro-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/img/Portrait_lefur4@2x.png") 30px 50px no-repeat;
+    background-size: cover;
+    z-index: $z-index-portrait-bg;
+  }
+
+  .portrait__intro-bg-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.3;
+  }
+
   .portrait {
     height: 100%;
-    background: url("../assets/img/Portrait_lefur4.png") center;
-    background-size: cover;
   }
 
   .portrait__intro {
     margin-bottom: 50px;
+    &.is-scrolling {
+      margin-top: 50px;
+    }
   }
 
-  .overlay {
-    height: 100%;
-    background-image: linear-gradient(rgba(7, 7, 7, 0.6), rgba(7, 7, 7, 0.6)), radial-gradient(circle at 53% 29%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 26%, rgba(7, 7, 7, 0.67) 70%, #070707);
-  }
   .portrait-container {
     margin: 20px 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 40px;
-    color: rgba(255, 255, 255, 0.7);
+    color: $white;
     font-size: 22px;
-    font-weight: 200;
+    font-weight: 100;
     line-height: 1.3;
+    z-index: $z-index-portrait-container;
   }
   .portrait__slider-nickname-container {
     display: flex;
@@ -249,6 +257,7 @@ export default {
 
   .select__content-scroll{
     box-sizing: border-box;
+    z-index: $z-index-above-items;
     position: fixed;
     bottom: 0;
     padding-left: 40px;
@@ -299,7 +308,17 @@ export default {
     line-height: 1.4;
   }
 
+  .overlay__top {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
+
   .overlay__bottom {
+    z-index: $z-index-above-items - 1;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -331,28 +350,23 @@ export default {
 
   .portrait__part1-image {
     width: 100%;
-    height: 667px;
-    background: url('../assets/img/malf-tpe-site.jpg') center no-repeat;
-    background-size: 400%;
-  }
-  .overlay-img{
-    height: 100%;
-    width: 100%;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.21), rgba(7, 7, 7, 0.21)), radial-gradient(circle at 42% 65%, rgba(7, 7, 7, 0.0), rgba(7, 7, 7, 0.0) 47%, rgba(7, 7, 7, 0.67) 83%, #070707);
+    height: 650px;
+    background: url('../assets/img/malf-tpe-site2@2x.png') top  no-repeat;
+    background-size: 200%;
   }
 
   .portrait__part2-image {
-    opacity: 0.89;
     width: 100%;
-    height: 467px;
-    background: url('../assets/img/jo20161608.jpg') 25% -300px no-repeat;
+    height: 767px;
+    background: url('../assets/img/jo20161608@2x.png') center no-repeat;
+    background-size: 320%;
   }
 
   .portrait__part3-image {
-    opacity: 0.89;
     width: 100%;
-    height: 686px;
-    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio.jpg') 35% -400px no-repeat;
+    height: 950px;
+    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio@2x.png') 35% -100px no-repeat;
+    background-size: 300%;
   }
 
   .portrait__instamoment {
@@ -367,10 +381,9 @@ export default {
   }
 
   .portrait__part4-image {
-    opacity: 0.8;
     width: 100%;
-    height: 467px;
-    background: url('../assets/img/2016-rio-paralympics-day-5-2.jpg') 25% no-repeat;
-    background-size: 300%;
+    height: 867px;
+    background: url('../assets/img/2016-rio-paralympics-day-5-2@2x.png') 45% 50px no-repeat;
+    background-size: 250%;
   }
 </style>

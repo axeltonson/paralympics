@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="39px" viewBox="0 0 34 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>E09F9BBB-10F4-49DD-B807-0147DDB0A29E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="36" height="11"></rect>
+    </defs>
+    <g id="01.1.4_Lefur_Palmares" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-122.000000, -373.000000)">
+        <g id="Infos" transform="translate(40.000000, 338.000000)">
+            <g id="Medailles">
+                <g id="Argent" transform="translate(62.000000, 35.000000)">
+                    <g id="Médaille" transform="translate(19.000000, 0.000000)">
+                        <circle id="Oval" stroke="#C4C4C4" stroke-width="8" cx="18.5" cy="26.5" r="8.5"></circle>
+                        <g id="Group">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Rectangle-3"></g>
+                            <rect id="Rectangle-2" fill="#CCCCCC" mask="url(#mask-2)" transform="translate(13.495689, 6.495689) rotate(-45.000000) translate(-13.495689, -6.495689) " x="9.49568901" y="-18.004311" width="8" height="49"></rect>
+                            <rect id="Rectangle-2-Copy" fill="#FFFFFF" mask="url(#mask-2)" transform="translate(22.495689, 6.495689) scale(-1, 1) rotate(-45.000000) translate(-22.495689, -6.495689) " x="18.495689" y="-18.004311" width="8" height="49"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
