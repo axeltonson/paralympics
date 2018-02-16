@@ -1,4 +1,4 @@
-<!-- 
+<!--
 
 *** HOW TO USE ***
 
@@ -52,5 +52,13 @@ export default {
         img {
             width: 100%;
         }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 375px;
+        height: 120px;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+        margin-top: -5px;
+      }
     }
 </style>

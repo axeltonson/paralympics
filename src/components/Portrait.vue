@@ -375,10 +375,10 @@
   }
 
   .portrait__instamoment {
+    position: relative;
+    z-index: $z-index-above-medias;
     width: 100%;
-    height: 280px;
-    opacity: 0.87;
-    background-color: #8a3ab9;
+    height: auto;
   }
 
   .portrait__part-text-block-end {
