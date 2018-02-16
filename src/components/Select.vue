@@ -1,6 +1,6 @@
 <template>
 <transition>
-  <div class="vue select">
+  <div class="vue select" id="selectHero" h_id="1">
     <menu-top></menu-top>
      <div class="select__content">
         <div class="select__content-items">
@@ -58,14 +58,14 @@
 </template>
 
 <script>
-import MenuTop from '@/components/Menu'
+import MenuTop from '@/components/menu'
 export default {
   name: 'Select',
   data () {
     return {}
   },
   components: {
-    MenuTop
+    'menu-top': MenuTop
   },
   methods: {
     selectAnim: function (event) {
@@ -76,6 +76,7 @@ export default {
         document.getElementById('sLeft').id = 'selectLeft'
         document.getElementById('sCenter').id = 'selectCenter'
         document.getElementById('sRight').id = 'selectRight'
+        this.leftHero()
       } else if (event.currentTarget.id === 'selectRight') {
         document.getElementById('selectRight').id = 'sCenter'
         document.getElementById('selectCenter').id = 'sLeft'
@@ -83,7 +84,24 @@ export default {
         document.getElementById('sLeft').id = 'selectLeft'
         document.getElementById('sCenter').id = 'selectCenter'
         document.getElementById('sRight').id = 'selectRight'
+        this.rightHero()
       }
+    },
+    leftHero: function (event) {
+      var heroId = document.getElementById('selectHero').getAttribute('h_id')
+      heroId = parseInt(heroId) - 1
+      if (heroId < 1) {
+        heroId = 3
+      }
+      document.getElementById('selectHero').setAttribute('h_id', heroId)
+    },
+    rightHero: function (event) {
+      var heroId = document.getElementById('selectHero').getAttribute('h_id')
+      heroId = parseInt(heroId) + 1
+      if (heroId > 3) {
+        heroId = 1
+      }
+      document.getElementById('selectHero').setAttribute('h_id', heroId)
     },
     handleScroll: function (event) {
       if (event.deltaY < 0) {

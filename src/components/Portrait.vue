@@ -1,6 +1,6 @@
 <template>
   <div class="portrait">
-    <portrait-toolbar></portrait-toolbar>
+    <menu-top></menu-top>
     <div class="overlay">
       <div class="portrait-container">
         <div class="portrait__slider-title">
@@ -61,11 +61,11 @@
 </template>
 
 <script>
-  import PortraitToolbar from '@/components/PortraitToolbar'
+  import MenuTop from '@/components/menu'
 export default {
     name: 'Portrait',
     components: {
-      'portrait-toolbar': PortraitToolbar
+      'menu-top': MenuTop
     },
     data () {
       return {}

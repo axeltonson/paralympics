@@ -1,21 +1,23 @@
 <template>
 
-   <div class="hmenu">
+   <div class="hmenu" id="hmenu">
       <div class="hmenu__main">
          <h1 class="hmenu__main-title">
             The Real Heroes
          </h1>
-         <div class="hmenu__main-button" id="hmenu__main-button" v-on:click="toggle">
+         <div class="hmenu__main-button" v-on:click="toggle">
             <span></span>
             <span></span>
             <span></span>
          </div>
       </div>
-      <div class="hmenu__toggle" id="hmenu__toggle">
+      <div class="hmenu__toggle">
          <ul class="hmenu__toggle-menu">
-            <li class="hmenu__toggle-menu-item"><router-link to="Select">Stories</router-link></li>
-            <li class="hmenu__toggle-menu-item"><router-link to="About">About</router-link></li>
-            <li class="hmenu__toggle-menu-item">Share</li>
+            <li class="hmenu__toggle-menu-item"><router-link to="Select">Les héros</router-link></li>
+            <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:1">Marie-Amélie Lefur</router-link></li>
+            <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:2">Michael Jeremiasz</router-link></li>
+            <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:3">Sandrine Martinet-Auriès</router-link></li>
+            <li class="hmenu__toggle-menu-item"><router-link to="About">A propos</router-link></li>
          </ul>
       </div>
    </div>
@@ -30,8 +32,7 @@ export default {
   },
   methods: {
     toggle: function (event) {
-      document.getElementById('hmenu__toggle').classList.toggle('active')
-      document.getElementById('hmenu__main-button').classList.toggle('active')
+      document.getElementById('hmenu').classList.toggle('active')
     }
   }
 }
@@ -86,39 +87,55 @@ h1.hmenu__main-title{
 .hmenu__main-button:last-child{
    margin-bottom: 0;
 }
-.hmenu__main-button.active span{width: 30px; border-radius: 2px; transition: 0.2s}
-.hmenu__main-button.active span + span{width: 38px; transition: 0.3s}
-.hmenu__main-button.active span + span + span{width: 23px; transition: 0.1s}
+.active .hmenu__main-button span{width: 30px; border-radius: 2px; transition: 0.2s}
+.active .hmenu__main-button span + span{width: 38px; transition: 0.3s}
+.active .hmenu__main-button span + span + span{width: 23px; transition: 0.1s}
 
 .hmenu__toggle{
-   position: absolute;
-   z-index: 11;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 0vh;
-   background-color: rgba(0,0,0,0.9);
-   overflow: hidden;
-   transition: 0.4s;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0vh;
+  background-color: rgba(0,0,0,0.9);
+  overflow: hidden;
+  transition: 0.4s;
 }
-.hmenu__toggle.active{
-   height: 100vh;
+.active .hmenu__toggle{
+  height: 100vh;
 }
 .hmenu__toggle-menu{
-   padding: 60px 70px;
+  padding: 60px 50px;
+  text-align: center;
 }
 .hmenu__toggle-menu-item{
-   margin-top: 40px;
-   font-size: 30px;
-   list-style-type: none;
-   font-weight: bold;
+  margin: 30px 0;
+  font-size: 36px;
+  list-style-type: none;
+  font-weight: bold;
 }
 .hmenu__toggle-menu-item a{
   text-decoration: none;
   color: #ffffff;
-  opacity: 0.8;
 }
 .hmenu__toggle-menu-item a:hover{
+
+}
+
+.hmenu__toggle-menu-subitem{
+  margin-bottom: 19px;
+  font-size: 23px;
+  list-style-type: none;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+.hmenu__toggle-menu-subitem a{
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.8;
+}
+.hmenu__toggle-menu-subitem a:hover{
   opacity: 1;
 }
 
