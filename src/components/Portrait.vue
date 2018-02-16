@@ -1,6 +1,7 @@
 <template>
   <div class="portrait">
     <portrait-header></portrait-header>
+    <menu-top></menu-top>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -149,15 +150,19 @@
 
 <script>
 import PortraitHeader from '@/components/PortraitHeader'
+import MenuTop from '@/components/menu'
+
 export default {
   name: 'Portrait',
   components: {
-    PortraitHeader
+    PortraitHeader,
+    MenuTop
   },
   data () {
     return {}
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
