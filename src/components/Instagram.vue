@@ -9,7 +9,7 @@
 
 <template>
   <div class="instagram">
-    <p>{{ title }}</p>
+    <!-- <p>{{ title }}</p> -->
     <img :src="this.picture" :alt="title">
   </div>
 </template>

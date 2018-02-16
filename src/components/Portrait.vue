@@ -125,7 +125,9 @@
           </div>
       </div>
 
-      <div class="portrait__instamoment"></div>
+      <div class="portrait__instamoment">
+        <instagram :url='"https://api.instagram.com/oembed?url=https://www.instagram.com/p/BQ0UzPRFvsE/"'></instagram>
+      </div>
 
       <div class="portrait-container">
         <div class="portrait__part-text-block">
@@ -158,10 +160,13 @@
 
 <script>
   import PortraitToolbar from '@/components/PortraitToolbar'
-export default {
+  import Instagram from '@/components/Instagram'
+
+  export default {
     name: 'Portrait',
     components: {
-      'portrait-toolbar': PortraitToolbar
+      PortraitToolbar,
+      Instagram
     },
     data () {
       return {}
