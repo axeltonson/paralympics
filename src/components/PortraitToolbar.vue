@@ -20,6 +20,7 @@
     margin: 0;
   }
   .portrait-toolbar {
+    z-index: $z-index-above-items;
     box-sizing: border-box;
     position: fixed;
     top: 0;
