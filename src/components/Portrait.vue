@@ -4,20 +4,53 @@
     <div class="overlay">
       <div class="portrait-container">
         <div class="portrait__slider-title">
-          <div class="portrait__slider-nickname-container">
-            <div class="dash"></div>
-            <span class="portrait__slider-nickname">&laquo Le guépard &raquo</span>
+          <div class="portrait__slider-nickname-container is-hidden">
+            <div class="dash is-hidden"></div>
+            <span class="portrait__slider-nickname is-hidden">&laquo Le guépard &raquo</span>
           </div>
           <h1>
             Marie-Amélie Le Fur
           </h1>
+          <div class="portrait-quote">"« Fais de ta vie un rêve et d’un rêve une réalité »</div>
+          <div class="dash"></div>
         </div>
         <div class="portrait__slider-subtitle">
           <p>Longueur, 100 m, 200 m, 400 m <p>
           <p>Athlétisme</p>
         </div>
+        <div class="portrait__medal">
+          <h3>médailles mondiales</h3>
+          <div class="portrait__medal-medals">
+            <div class="portrait__medal-medals-group">
+              <p class="medals-nb">7</p>
+              <img src="../assets/img/medal-gold.png" alt="7 gold medals">
+            </div>
+            <div class="portrait__medal-medals-group">
+              <p class="medals-nb">11</p>
+              <img src="../assets/img/medal-silver.png" alt="11 silver medals">
+            </div>
+            <div class="portrait__medal-medals-group">
+              <p class="medals-nb">2</p>
+              <img src="../assets/img/medal-bronz.png" alt="2 bronz medals">
+            </div>
+          </div>
+        </div>
+          <div class="portrait__titles">
+            <h3>4 titres</h3>
+            <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent en Saut en longueur</p>
+            <p class="portrait__titles-title">JO de Pékin 2008, Médaille d’argent au 100m</p>
+            <p class="portrait__titles-title">JO de Londres 2012, Médaille D’or sur 100 mètres</p>
+            <p class="portrait__titles-title">JO de Londres 2012, Médaille D’argent sur 200 mètres</p>
+          </div>
+          <div class="portrait__records">
+            <h3>3 records mondiaux</h3>
+            <p class="portrait__records-record">Record du monde du saut en longueur à Doha (5,74m)</p>
+            <p class="portrait__records-record">Une médaille d’or au 400m en établissant un nouveau record (59"27)</p>
+            <p class="portrait__records-record">Jeux paralympiques de Rio, record du monde sur 400 mètres</p>
+          </div>
       </div>
     </div>
+    <div class="overlay__bottom"></div>
     <div class="select__content-scroll">
       <p class="select__content-scroll-text">
         Scroll to<br> explore
@@ -43,13 +76,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-  h1, h2, p {
+  h1, h2, h3, p {
     margin: 0;
   }
   h1 {
     line-height: 0.91;
   }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+  }
 
+  .is-hidden {
+    display: none;
+  }
   .portrait {
     height: 100%;
     background: url("../assets/img/Portrait_lefur4.png") center;
@@ -80,7 +122,7 @@ export default {
   .dash {
     width: 18px;
     height: 2px;
-    margin-right: 20px;
+    margin: 20px 20px 20px 0;
     background-color: $white;
   }
   .portrait__slider-subtitle {
@@ -109,5 +151,43 @@ export default {
     width: 2px;
     height: 75px;
     background-color: $white;
+  }
+
+  .portrait-quote {
+    color: rgba(255,255,255, 0.6);
+    font-size: 24px;
+    font-weight: 200;
+    font-style: italic;
+    text-align: left;
+  }
+
+  .portrait__medal-medals {
+    display: flex;
+  }
+  .portrait__medal-medals-group {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 15px;
+  }
+  .medals-nb {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 2px;
+    margin-bottom: 2px;
+  }
+
+  .portrait__titles-title,
+  .portrait__records-record{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .overlay__bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 215px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
 </style>

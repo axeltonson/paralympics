@@ -43,5 +43,4 @@ export default {
     text-transform: uppercase;
     font-weight: 700;
   }
-
 </style>
