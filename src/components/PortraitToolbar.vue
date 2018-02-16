@@ -16,10 +16,18 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+  h2 {
+    margin: 0;
+  }
   .portrait-toolbar {
+    z-index: $z-index-above-items;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 20px;
   }
   .portrait-toolbar__menu {
