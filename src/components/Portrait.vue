@@ -125,7 +125,9 @@
           </div>
       </div>
 
-      <div class="portrait__instamoment"></div>
+      <div class="portrait__instamoment">
+        <instagram :url='"https://api.instagram.com/oembed?url=https://www.instagram.com/p/BQ0UzPRFvsE/"'></instagram>
+      </div>
 
       <div class="portrait-container">
         <div class="portrait__part-text-block">
@@ -144,20 +146,32 @@
       </div>
 
       <div class="portrait__part4-image"></div>
+
+    <div class="overlay__top"></div>
+    <div class="overlay__bottom"></div>
+    <div class="select__content-scroll">
+      <p class="select__content-scroll-text">
+        Scroll to<br> explore
+    </p>
+      <div class="select__content-scroll-line"></div>
     </div>
+  </div>
 </template>
 
 <script>
-import PortraitHeader from '@/components/PortraitHeader'
-export default {
-  name: 'Portrait',
-  components: {
-    PortraitHeader
-  },
-  data () {
-    return {}
+  import PortraitHeader from '@/components/PortraitHeader'
+  import Instagram from '@/components/Instagram'
+
+  export default {
+    name: 'Portrait',
+    components: {
+      PortraitHeader,
+      Instagram
+    },
+    data () {
+      return {}
+    }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -246,6 +260,29 @@ export default {
     line-height: 1.5;
   }
 
+  .select__content-scroll{
+    box-sizing: border-box;
+    z-index: $z-index-above-items;
+    position: fixed;
+    bottom: 0;
+    padding-left: 40px;
+    width: 100%;
+    text-align: left;
+  }
+  .select__content-scroll-text{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2.8px;
+    color: $white;
+    margin-bottom: 12px;
+  }
+  .select__content-scroll-line{
+    width: 2px;
+    height: 75px;
+    background-color: $white;
+  }
+
   .portrait-quote {
     color: $white;
     font-size: 24px;
@@ -274,6 +311,24 @@ export default {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.4;
+  }
+
+  .overlay__top {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
+
+  .overlay__bottom {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 215px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
 
   .portrait__part1-video {
@@ -320,10 +375,10 @@ export default {
   }
 
   .portrait__instamoment {
+    position: relative;
+    z-index: $z-index-above-medias;
     width: 100%;
-    height: 280px;
-    opacity: 0.87;
-    background-color: #8a3ab9;
+    height: auto;
   }
 
   .portrait__part-text-block-end {
