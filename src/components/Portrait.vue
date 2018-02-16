@@ -1,6 +1,6 @@
 <template>
   <div class="portrait">
-    <portrait-overlay></portrait-overlay>
+    <portrait-header></portrait-header>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -148,11 +148,11 @@
 </template>
 
 <script>
-import PortraitOverlay from '@/components/PortraitOverlay'
+import PortraitHeader from '@/components/PortraitHeader'
 export default {
   name: 'Portrait',
   components: {
-    'portrait-overlay': PortraitOverlay
+    PortraitHeader
   },
   data () {
     return {}
