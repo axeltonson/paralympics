@@ -17,9 +17,17 @@ export default {
     font-size: 20px;
     color: $white;
     background-color: $black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
     @media #{$tablet} {
       // EXEMPLE DE MEDIA QUERY
     }
+  }
+
+  #app {
+    height: 100%;
   }
 
   /* Portraits Style */
@@ -34,6 +42,6 @@ export default {
     text-align: left;
     text-transform: uppercase;
     font-weight: 700;
-    margin: 0;
   }
+
 </style>
