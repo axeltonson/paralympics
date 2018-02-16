@@ -29,4 +29,11 @@ export default {
     text-transform: uppercase;
     padding: 5px 0;
   }
+  h2 {
+    font-size: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+  }
 </style>
