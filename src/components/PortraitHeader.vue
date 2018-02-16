@@ -1,6 +1,7 @@
 <template>
   <div class="portrait-overlay">
-    <portrait-toolbar></portrait-toolbar>
+    <!-- <portrait-toolbar></portrait-toolbar> -->
+    <menu-top></menu-top>
     <div class="overlay__top"></div>
     <div class="overlay__bottom"></div>
     <div class="select__content-scroll">
@@ -13,11 +14,13 @@
 </template>
 
 <script>
-  import PortraitToolbar from '@/components/PortraitToolbar'
+  // import PortraitToolbar from '@/components/PortraitToolbar'
+  import MenuTop from '@/components/Menu'
   export default {
     name: 'PortraitOverlay',
     components: {
-      'portrait-toolbar': PortraitToolbar
+      // 'portrait-toolbar': PortraitToolbar
+      MenuTop
     },
     data () {
       return {}
