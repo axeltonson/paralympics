@@ -150,7 +150,7 @@
     <div class="select__content-scroll">
       <p class="select__content-scroll-text">
         Scroll to<br> explore
-   </p>
+    </p>
       <div class="select__content-scroll-line"></div>
     </div>
   </div>
@@ -279,7 +279,7 @@ export default {
   }
 
   .portrait-quote {
-    color: rgba(255,255,255, 0.6);
+    color: $white;
     font-size: 24px;
     font-weight: 200;
     font-style: italic;
