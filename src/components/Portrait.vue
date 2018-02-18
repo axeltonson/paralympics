@@ -9,7 +9,7 @@
           <div class="portrait__slider-title">
             <div class="portrait__slider-nickname-container is-hidden">
               <div class="dash is-hidden"></div>
-              <span class="portrait__slider-nickname is-hidden">&laquo Le guépard &raquo</span>
+              <span class="portrait__slider-nickname is-hidden">&laquo; Le guépard &raquo;</span>
             </div>
             <h1>
               Marie-Amélie Le Fur
@@ -53,23 +53,23 @@
             </div>
         </div>
 
-          <div class="portrait__part1">
-            <h3>La victoire</h3>
-            <p>
-              On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012. 
-            </p>
-            <div class="portrait__part1-video">
-              <div class="portrait__part1-video-youtube">
-                <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
-              </div>
-            </div>
-            <div class="portrait__part-text-block">
-              <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre la ligne d’arrivée mais est persuadée d’avoir fini en seconde position.</p>
-              <p class="portrait__part-text">Elle retient son souffle…</p>
-              <p class="portrait__part-text">Le tableau affiche le résultat…</p>
-              <p class="portrait__part-text">Elle est première.</p>
+        <div class="portrait__part1">
+          <h3>La victoire</h3>
+          <p>
+            On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012. 
+          </p>
+          <div class="portrait__part1-video">
+            <div class="portrait__part1-video-youtube">
+              <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
             </div>
           </div>
+          <div class="portrait__part-text-block">
+            <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre la ligne d’arrivée mais est persuadée d’avoir fini en seconde position.</p>
+            <p class="portrait__part-text">Elle retient son souffle…</p>
+            <p class="portrait__part-text">Le tableau affiche le résultat…</p>
+            <p class="portrait__part-text">Elle est première.</p>
+          </div>
+        </div>
       </div>
 
       <div class="portrait__part1-image"></div>
@@ -115,14 +115,14 @@
       <div class="portrait__part3-image"></div>
 
       <div class="portrait-container">
-          <div class="portrait__part-text-block">
-            <p class="portrait__part-text">
-              Depuis 13 ans elle apprivoise sa <span class="link-bold">lame en carbone</span> bien aiguisée.
-            </p>
-            <p class="portrait__part-text">
-              <span class="link-bold">Dompter sa prothèse</span> est un combat quotidien.
-            </p>
-          </div>
+        <div class="portrait__part-text-block">
+          <p class="portrait__part-text">
+            Depuis 13 ans elle apprivoise sa <span class="link-bold">lame en carbone</span> bien aiguisée.
+          </p>
+          <p class="portrait__part-text">
+            <span class="link-bold">Dompter sa prothèse</span> est un combat quotidien.
+          </p>
+        </div>
       </div>
 
       <div class="portrait__instamoment">
@@ -152,7 +152,7 @@
     <div class="select__content-scroll">
       <p class="select__content-scroll-text">
         Scroll to<br> explore
-    </p>
+      </p>
       <div class="select__content-scroll-line"></div>
     </div>
   </div>
