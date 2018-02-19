@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Landing from '@/components/Landing'
 import Intro from '@/components/Intro'
 import Portrait from '@/components/Portrait'
+import LeFur from '@/components/Le-fur'
+import Jeremiasz from '@/components/Jeremiasz'
 import Select from '@/components/Select'
 import About from '@/components/About'
 
@@ -19,9 +21,23 @@ export default new Router({
       name: 'Intro',
       component: Intro
     }, {
-      path: '/portrait/:id',
+      path: '/portrait/',
       name: 'Portrait',
-      component: Portrait
+      component: Portrait,
+      children: [
+        {
+          path: 'le-fur',
+          component: LeFur
+        },
+        {
+          path: 'jeremiasz',
+          component: Jeremiasz
+        }
+      ]
+    }, {
+      path: '/jeremiasz',
+      name: 'Jeremiasz',
+      component: Jeremiasz
     }, {
       path: '/select',
       name: 'Select',
