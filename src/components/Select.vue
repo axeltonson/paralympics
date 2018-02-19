@@ -2,10 +2,11 @@
 <transition>
   <div class="vue select" id="selectHero" h_id="1">
     <menu-top></menu-top>
+    <nav-arrows></nav-arrows>
      <div class="select__content">
         <div class="select__content-items">
 
-           <div class="select__item" id="selectLeft" v-on:click="selectAnim">
+           <div class="select__item" id="selectLeft">
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>
@@ -18,7 +19,7 @@
                <p>Athlétisme</p>
              </div>
            </div>
-           <div class="select__item" id="selectCenter" v-on:click="selectAnim">
+           <div class="select__item" id="selectCenter">
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>
@@ -31,7 +32,7 @@
                <p>Athlétisme</p>
              </div>
            </div>
-           <div class="select__item" id="selectRight" v-on:click="selectAnim">
+           <div class="select__item" id="selectRight">
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>
@@ -59,50 +60,52 @@
 
 <script>
 import MenuTop from '@/components/menu'
+import NavArrows from '@/components/NavArrows'
 export default {
   name: 'Select',
   data () {
     return {}
   },
   components: {
-    'menu-top': MenuTop
+    'menu-top': MenuTop,
+    'nav-arrows': NavArrows
   },
   methods: {
-    selectAnim: function (event) {
-      if (event.currentTarget.id === 'selectLeft') {
-        document.getElementById('selectLeft').id = 'sCenter'
-        document.getElementById('selectCenter').id = 'sRight'
-        document.getElementById('selectRight').id = 'sLeft'
-        document.getElementById('sLeft').id = 'selectLeft'
-        document.getElementById('sCenter').id = 'selectCenter'
-        document.getElementById('sRight').id = 'selectRight'
-        this.leftHero()
-      } else if (event.currentTarget.id === 'selectRight') {
-        document.getElementById('selectRight').id = 'sCenter'
-        document.getElementById('selectCenter').id = 'sLeft'
-        document.getElementById('selectLeft').id = 'sRight'
-        document.getElementById('sLeft').id = 'selectLeft'
-        document.getElementById('sCenter').id = 'selectCenter'
-        document.getElementById('sRight').id = 'selectRight'
-        this.rightHero()
-      }
-    },
-    leftHero: function (event) {
-      var heroId = document.getElementById('selectHero').getAttribute('h_id')
-      heroId = parseInt(heroId) - 1
-      if (heroId < 1) {
-        heroId = 3
-      }
-      document.getElementById('selectHero').setAttribute('h_id', heroId)
-    },
-    rightHero: function (event) {
-      var heroId = document.getElementById('selectHero').getAttribute('h_id')
-      heroId = parseInt(heroId) + 1
-      if (heroId > 3) {
-        heroId = 1
-      }
-      document.getElementById('selectHero').setAttribute('h_id', heroId)
-    },
+    // selectAnim: function (event) {
+    //   if (event.currentTarget.id === 'selectLeft') {
+    //     document.getElementById('selectLeft').id = 'sCenter'
+    //     document.getElementById('selectCenter').id = 'sRight'
+    //     document.getElementById('selectRight').id = 'sLeft'
+    //     document.getElementById('sLeft').id = 'selectLeft'
+    //     document.getElementById('sCenter').id = 'selectCenter'
+    //     document.getElementById('sRight').id = 'selectRight'
+    //     this.leftHero()
+    //   } else if (event.currentTarget.id === 'selectRight') {
+    //     document.getElementById('selectRight').id = 'sCenter'
+    //     document.getElementById('selectCenter').id = 'sLeft'
+    //     document.getElementById('selectLeft').id = 'sRight'
+    //     document.getElementById('sLeft').id = 'selectLeft'
+    //     document.getElementById('sCenter').id = 'selectCenter'
+    //     document.getElementById('sRight').id = 'selectRight'
+    //     this.rightHero()
+    //   }
+    // },
+    // leftHero: function (event) {
+    //   var heroId = document.getElementById('selectHero').getAttribute('h_id')
+    //   heroId = parseInt(heroId) - 1
+    //   if (heroId < 1) {
+    //     heroId = 3
+    //   }
+    //   document.getElementById('selectHero').setAttribute('h_id', heroId)
+    // },
+    // rightHero: function (event) {
+    //   var heroId = document.getElementById('selectHero').getAttribute('h_id')
+    //   heroId = parseInt(heroId) + 1
+    //   if (heroId > 3) {
+    //     heroId = 1
+    //   }
+    //   document.getElementById('selectHero').setAttribute('h_id', heroId)
+    // },
     handleScroll: function (event) {
       if (event.deltaY < 0) {
         console.log('scrolling up')
