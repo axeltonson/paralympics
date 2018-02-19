@@ -1,6 +1,6 @@
 <template>
   <div class="portrait">
-    <menu-top></menu-top>
+    <portrait-header></portrait-header>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -9,7 +9,7 @@
           <div class="portrait__slider-title">
             <div class="portrait__slider-nickname-container is-hidden">
               <div class="dash is-hidden"></div>
-              <span class="portrait__slider-nickname is-hidden">&laquo Le guépard &raquo</span>
+              <span class="portrait__slider-nickname is-hidden">&laquo; Le guépard &raquo;</span>
             </div>
             <h1>
               Marie-Amélie Le Fur
@@ -125,7 +125,9 @@
           </div>
       </div>
 
-      <div class="portrait__instamoment"></div>
+      <div class="portrait__instamoment">
+        <instagram :url='"https://api.instagram.com/oembed?url=https://www.instagram.com/p/BQ0UzPRFvsE/"'></instagram>
+      </div>
 
       <div class="portrait-container">
         <div class="portrait__part-text-block">
@@ -157,11 +159,14 @@
 </template>
 
 <script>
-  import MenuTop from '@/components/menu'
-export default {
+  import PortraitHeader from '@/components/PortraitHeader'
+  import Instagram from '@/components/Instagram'
+
+  export default {
     name: 'Portrait',
     components: {
-      'menu-top': MenuTop
+      PortraitHeader,
+      Instagram
     },
     data () {
       return {}
@@ -370,10 +375,10 @@ export default {
   }
 
   .portrait__instamoment {
+    position: relative;
+    z-index: $z-index-above-medias;
     width: 100%;
-    height: 280px;
-    opacity: 0.87;
-    background-color: #8a3ab9;
+    height: auto;
   }
 
   .portrait__part-text-block-end {
