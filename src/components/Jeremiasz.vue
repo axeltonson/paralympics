@@ -153,7 +153,6 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
 
 <script>
   import PortraitHeader from '@/components/PortraitHeader'
-  const basicScroll = require('basicscroll')
   export default {
     name: 'Jeremiasz',
     components: {
@@ -161,32 +160,12 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     },
     data () {
       return {}
-    },
-    mounted: function () {
-      const instance = basicScroll.create({
-        elem: document.querySelector('.portrait__part1'),
-        from: 'top-bottom',
-        to: 'middle-middle',
-        props: {
-          '--opacity': {
-            from: 0.01,
-            to: 0.9
-          }
-        }
-      })
-      instance.start()
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-
-  .portrait__part1{
-  	opacity: var(--opacity);
-  	will-change: opacity;
-  }
-
 
   h1, h2, h3, p {
     margin: 0;

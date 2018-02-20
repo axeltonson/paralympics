@@ -15,7 +15,7 @@
                <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m <p>
+               <p>Longueur, 100 m, 200 m, 400 m </p>
                <p>Athlétisme</p>
              </div>
            </div>
@@ -23,26 +23,24 @@
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+                 <span class="select__item-nickname">&laquo Le militant &raquo</span>
                </div>
-               <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
+               <h1 class="select__item-title">Michael Jeremiasz</h1>
              </div>
              <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m <p>
-               <p>Athlétisme</p>
+               <p>Tennis</p>
              </div>
            </div>
            <div class="select__item" id="selectRight">
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+                 <span class="select__item-nickname">&laquo Le phoenix &raquo</span>
                </div>
-               <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
+               <h1 class="select__item-title">Sandrine Martinet-Aurières</h1>
              </div>
              <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m <p>
-               <p>Athlétisme</p>
+               <p>Judo</p>
              </div>
            </div>
 
