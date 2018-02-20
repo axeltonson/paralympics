@@ -1,5 +1,6 @@
 <template>
   <div>
+    <info></info>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -165,11 +166,13 @@
 
 <script>
   import Instagram from '@/components/Instagram'
+  import Info from '@/components/Info'
 
   export default {
     name: 'Le-fur',
     components: {
-      Instagram
+      Instagram,
+      Info
     }
   }
 </script>
@@ -230,7 +233,6 @@
   }
 
   .portrait-container {
-    margin: 20px 0;
     position: relative;
     display: flex;
     flex-direction: column;
