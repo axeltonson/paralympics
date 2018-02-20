@@ -59,9 +59,10 @@
           On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012.
         </p>
         <div class="portrait__part1-video">
-          <div class="portrait__part1-video-youtube">
+          <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing"></youtube>
+          <!-- <div class="portrait__part1-video-youtube" @click="playVideo">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
-          </div>
+          </div> -->
         </div>
         <div class="portrait__part-text-block">
           <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre
@@ -170,6 +171,27 @@
     name: 'Le-fur',
     components: {
       Instagram
+    },
+    data () {
+      return {
+        videoId: '2_vPxntIHI8',
+        playerVars: {
+          controls: 1
+        }
+      }
+    },
+    methods: {
+      playVideo () {
+        this.player.playVideo()
+      },
+      playing () {
+        console.log('we are watching!!!')
+      }
+    },
+    computed: {
+      player () {
+        return this.$refs.youtube.player
+      }
     }
   }
 </script>
