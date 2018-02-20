@@ -60,9 +60,9 @@
         </p>
         <div class="portrait__part1-video">
           <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing"></youtube>
-          <div class="portrait__part1-video-youtube" @click="playVideo">
+          <!-- <div class="portrait__part1-video-youtube" @click="playVideo">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
-          </div>
+          </div> -->
         </div>
         <div class="portrait__part-text-block">
           <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre
@@ -176,7 +176,7 @@
       return {
         videoId: '2_vPxntIHI8',
         playerVars: {
-          controls: 0
+          controls: 1
         }
       }
     },
