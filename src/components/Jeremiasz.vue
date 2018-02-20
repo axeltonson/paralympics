@@ -59,7 +59,7 @@
       </div>
       </div>
     <div class="portrait__part1-image"></div>
-    <div class="portrait-container">  
+    <div class="portrait-container">
         <div class="portrait__part-text-block">
           <p class="portrait__part-text">Numéro 1 mondial en double en 2004 et simple en 2005.
 Il remporte quatre médailles lors des Jeux Paralympiques de 2004, 2008 et 2012, dont une en OR en double ainsi que 7 titres du Grand Chelem en double.
@@ -125,7 +125,7 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     <div class="portrait-container">
       <div class="portrait__part-text-block">
         <p class="portrait__part-text">
-          Il a également créé  Handiamo!, une entreprise sociale agréée solidaire spécialisée dans la gestion de carrières de sportifs de haut niveau en situation de handicap et l’organisation d’événements et de conférences de sensibilisation au handicap. 
+          Il a également créé  Handiamo!, une entreprise sociale agréée solidaire spécialisée dans la gestion de carrières de sportifs de haut niveau en situation de handicap et l’organisation d’événements et de conférences de sensibilisation au handicap.
         </p>
       </div>
     </div>
@@ -153,6 +153,7 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
 
 <script>
   import PortraitHeader from '@/components/PortraitHeader'
+  const basicScroll = require('basicscroll')
   export default {
     name: 'Jeremiasz',
     components: {
@@ -160,12 +161,32 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     },
     data () {
       return {}
+    },
+    mounted: function () {
+      const instance = basicScroll.create({
+        elem: document.querySelector('.portrait__part1'),
+        from: 'top-bottom',
+        to: 'middle-middle',
+        props: {
+          '--opacity': {
+            from: 0.01,
+            to: 0.9
+          }
+        }
+      })
+      instance.start()
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+  .portrait__part1{
+  	opacity: var(--opacity);
+  	will-change: opacity;
+  }
+
 
   h1, h2, h3, p {
     margin: 0;

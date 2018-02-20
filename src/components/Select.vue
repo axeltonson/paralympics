@@ -12,7 +12,7 @@
                  <div class="dash"></div>
                  <span class="select__item-nickname">&laquo Le guépard &raquo</span>
                </div>
-               <h1>Marie-Amélie Le Fur</h1>
+               <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
                <p>Longueur, 100 m, 200 m, 400 m <p>
@@ -25,7 +25,7 @@
                  <div class="dash"></div>
                  <span class="select__item-nickname">&laquo Le guépard &raquo</span>
                </div>
-               <h1>Marie-Amélie Le Fur</h1>
+               <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
                <p>Longueur, 100 m, 200 m, 400 m <p>
@@ -38,7 +38,7 @@
                  <div class="dash"></div>
                  <span class="select__item-nickname">&laquo Le guépard &raquo</span>
                </div>
-               <h1>Marie-Amélie Le Fur</h1>
+               <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
              </div>
              <div class="select__item-subtitle">
                <p>Longueur, 100 m, 200 m, 400 m <p>
@@ -48,9 +48,7 @@
 
         </div>
         <div class="select__content-scroll">
-          <p class="select__content-scroll-text">
-            Scroll to<br> explore
-          </p>
+          <p class="select__content-scroll-text">Scroll to<br> explore</p>
           <div class="select__content-scroll-line"></div>
         </div>
     </div>
@@ -59,7 +57,7 @@
 </template>
 
 <script>
-import MenuTop from '@/components/menu'
+import MenuTop from '@/components/Menu'
 import NavArrows from '@/components/NavArrows'
 export default {
   name: 'Select',
@@ -124,8 +122,16 @@ export default {
     },
     scrollDown: function () {
       var heroId = document.getElementById('selectHero').getAttribute('h_id')
+      var heroPath = 'Le-fur'
+      if (heroId === '1') {
+        heroPath = 'Le-fur'
+      } else if (heroId === '2') {
+        heroPath = 'Jeremiasz'
+      } else {
+        heroPath = 'Jeremiasz'
+      }
       console.log('scrolling down 2')
-      this.$router.push('/Portrait/:' + heroId)
+      this.$router.push('/Portrait/' + heroPath)
     },
     clickEvent: function (event) {
       console.log('click')
@@ -157,6 +163,8 @@ body{
 
 /* FIN A SUPPRIMER */
 
+
+
 .select{
   width: 100%;
   height: 100%;
@@ -181,9 +189,11 @@ body{
   text-align: left;
 }
 .select__content-scroll-text{
-  font-size: 14px;
+  font-size: 11px;
   color: #ffffff;
   margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .select__content-scroll-line{
   width: 2px;
@@ -224,14 +234,14 @@ body{
 } */
 
 .select__item-image{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  border: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // width: 100px;
+  // height: 100px;
+  // background-color: red;
+  // border: 0;
 }
 .select__item-content{
   position: absolute;
@@ -241,6 +251,28 @@ body{
   width: 100px;
   color: white;
   text-align: center;
+}
+.select__item-nickname{
+  font-size: 25px;
+  padding-left: 38px;
+  position: relative;
+}
+.select__item-nickname::before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  width: 18px;
+  background-color: #ffffff;
+}
+.select__item-title{
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+.select__item-subtitle p{
+  font-size: 14px;
+  margin: 8px 0;
 }
 
 /* Enter and Leave transitions */

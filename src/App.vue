@@ -35,6 +35,7 @@ export default {
     font-weight: 700;
     text-transform: uppercase;
     padding: 5px 0;
+    line-height: 0.91em;
   }
   h2 {
     font-size: 15px;

@@ -52,7 +52,7 @@
           <p class="portrait__records-record">Jeux paralympiques de Rio, record du monde sur 400 mètres</p>
         </div>
       </div>
-  
+
       <div class="portrait__part1">
         <h3>La victoire</h3>
         <p>
@@ -72,15 +72,15 @@
         </div>
       </div>
     </div>
-  
+
     <div class="portrait__part1-image"></div>
-  
+
     <div class="portrait-container">
       <div class="portrait__part-text-block">
         <p class="portrait__part-text">Qu’est ce qui fait d’elle une femme hors du commun?</p>
         <p class="portrait__part-text">Le tableau affiche le résultat…</p>
       </div>
-  
+
       <div class="portrait__part2">
         <h3>L'obstacle</h3>
         <p class="portrait__part-text">
@@ -92,9 +92,9 @@
         </p>
       </div>
     </div>
-  
+
     <div class="portrait__part2-image"></div>
-  
+
     <div class="portrait-container">
       <div class="portrait__part-text-block">
         <p class="portrait__part-text">Dès le lendemain de son amputation elle pense à la légèreté qu’elle ressentait avant dans l’athlétisme et recommence à courir 4 mois plus tard, le 31 juillet 2004 pour la première fois avec sa lame.
@@ -103,7 +103,7 @@
           Le besoin de vivre, de rebondir chez Amélie est quasi immédiat.
         </p>
       </div>
-  
+
       <div class="portrait__part3">
         <h3>Le guépard</h3>
         <div class="portrait__part-text-block">
@@ -113,9 +113,9 @@
         </div>
       </div>
     </div>
-  
+
     <div class="portrait__part3-image"></div>
-  
+
     <div class="portrait-container">
       <div class="portrait__part-text-block">
         <p class="portrait__part-text">
@@ -127,11 +127,11 @@
         </p>
       </div>
     </div>
-  
+
     <div class="portrait__instamoment">
       <instagram :url='"https://api.instagram.com/oembed?url=https://www.instagram.com/p/BQ0UzPRFvsE/"'></instagram>
     </div>
-  
+
     <div class="portrait-container">
       <div class="portrait__part-text-block">
         <p class="portrait__part-text">
@@ -148,9 +148,9 @@
         </p>
       </div>
     </div>
-  
+
     <div class="portrait__part4-image"></div>
-  
+
     <div class="overlay__top"></div>
     <div class="overlay__bottom"></div>
     <div class="select__content-scroll">
@@ -181,26 +181,26 @@
   p {
     margin: 0;
   }
-  
+
   h1 {
     line-height: 0.91;
   }
-  
+
   h3 {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 20px 0 10px;
   }
-  
+
   .link-bold {
     font-weight: bold;
   }
-  
+
   .is-hidden {
     display: none;
   }
-  
+
   .portrait__intro-bg {
     position: absolute;
     top: 0;
@@ -210,25 +210,25 @@
     background-size: cover;
     z-index: $z-index-portrait-bg;
   }
-  
+
   .portrait__intro-bg-overlay {
     width: 100%;
     height: 100%;
     background-color: $black;
     opacity: 0.3;
   }
-  
+
   .portrait {
     height: 100%;
   }
-  
+
   .portrait__intro {
     margin-bottom: 50px;
     &.is-scrolling {
       margin-top: 50px;
     }
   }
-  
+
   .portrait-container {
     margin: 20px 0;
     position: relative;
@@ -242,32 +242,32 @@
     line-height: 1.3;
     z-index: $z-index-portrait-container;
   }
-  
+
   .portrait__slider-nickname-container {
     display: flex;
     align-items: center;
     margin-bottom: 3px;
   }
-  
+
   .portrait__slider-nickname {
     font-size: 25px;
     text-align: left;
     font-weight: 200;
   }
-  
+
   .dash {
     width: 18px;
     height: 2px;
     margin: 20px 20px 20px 0;
     background-color: $white;
   }
-  
+
   .portrait__slider-subtitle {
     font-size: 14px;
     font-style: normal;
     line-height: 1.5;
   }
-  
+
   .select__content-scroll {
     box-sizing: border-box;
     z-index: $z-index-above-items;
@@ -277,7 +277,7 @@
     width: 100%;
     text-align: left;
   }
-  
+
   .select__content-scroll-text {
     font-size: 11px;
     text-transform: uppercase;
@@ -286,13 +286,13 @@
     color: $white;
     margin-bottom: 12px;
   }
-  
+
   .select__content-scroll-line {
     width: 2px;
     height: 75px;
     background-color: $white;
   }
-  
+
   .portrait-quote {
     color: $white;
     font-size: 24px;
@@ -300,31 +300,31 @@
     font-style: italic;
     text-align: left;
   }
-  
+
   .portrait__medal-medals {
     display: flex;
   }
-  
+
   .portrait__medal-medals-group {
     display: flex;
     align-items: flex-end;
     margin-right: 15px;
   }
-  
+
   .medals-nb {
     font-size: 14px;
     font-weight: 600;
     margin-right: 2px;
     margin-bottom: 2px;
   }
-  
+
   .portrait__titles-title,
   .portrait__records-record {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.4;
   }
-  
+
   .overlay__top {
     z-index: $z-index-above-items - 1;
     position: fixed;
@@ -333,7 +333,7 @@
     height: 120px;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
-  
+
   .overlay__bottom {
     z-index: $z-index-above-items - 1;
     position: fixed;
@@ -342,63 +342,63 @@
     height: 215px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
-  
+
   .portrait__part1-video {
     margin-top: 20px;
     margin-bottom: 60px;
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .portrait__part1-video-youtube {
     position: relative;
     background-color: $white;
     width: 246px;
     height: 138px;
   }
-  
+
   .portrait__part1-video-youtube-controls {
     position: absolute;
     left: -30px;
     bottom: -15px;
   }
-  
+
   .portrait__part-text {
     margin-bottom: 40px;
   }
-  
+
   .portrait__part1-image {
     width: 100%;
     height: 650px;
     background: url('../assets/img/malf-tpe-site2@2x.png') top no-repeat;
     background-size: 200%;
   }
-  
+
   .portrait__part2-image {
     width: 100%;
     height: 767px;
     background: url('../assets/img/jo20161608@2x.png') center no-repeat;
     background-size: 320%;
   }
-  
+
   .portrait__part3-image {
     width: 100%;
     height: 950px;
     background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio@2x.png') 35% -100px no-repeat;
     background-size: 300%;
   }
-  
+
   .portrait__instamoment {
     position: relative;
     z-index: $z-index-above-medias;
     width: 100%;
     height: auto;
   }
-  
+
   .portrait__part-text-block-end {
     margin-top: 170px;
   }
-  
+
   .portrait__part4-image {
     width: 100%;
     height: 867px;
