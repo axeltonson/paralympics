@@ -45,7 +45,6 @@ export default {
   mounted () {
     this.animation
       .fromTo('.info-container__content', 0.75, { right: -277 }, { right: 0 }, 'start')
-    console.log('hello')
   },
   methods: {
     showMore () {
