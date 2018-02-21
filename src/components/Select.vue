@@ -7,6 +7,7 @@
         <div class="select__content-items">
 
            <div class="select__item" id="selectLeft">
+             <img src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>
@@ -20,6 +21,7 @@
              </div>
            </div>
            <div class="select__item" id="selectCenter">
+             <img src="../assets/img/Portrait_jeremiasz.png" alt="Michael Jeremiasz">
              <div class="select__item-title">
                <div class="select__item-nickname-container">
                  <div class="dash"></div>

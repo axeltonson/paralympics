@@ -13,11 +13,11 @@
     <div class="hmenu__toggle">
       <ul class="hmenu__toggle-menu">
         <li class="hmenu__toogle-menu-title">Menu</li>
-        <li class="hmenu__toggle-menu-item"><router-link to="Select">Les héros</router-link></li>
-        <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:1">Marie-Amélie Lefur</router-link></li>
-        <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:2">Michael Jeremiasz</router-link></li>
-        <li class="hmenu__toggle-menu-subitem"><router-link to="Portrait/:3">Sandrine Martinet-Auriès</router-link></li>
-        <li class="hmenu__toggle-menu-item"><router-link to="About">A propos</router-link></li>
+        <li class="hmenu__toggle-menu-item"><router-link to="/Select" exact>Les héros</router-link></li>
+        <li class="hmenu__toggle-menu-subitem"><router-link to="/Portrait/Le-fur" exact>Marie-Amélie Lefur</router-link></li>
+        <li class="hmenu__toggle-menu-subitem"><router-link to="/Portrait/Jeremiasz" exact>Michael Jeremiasz</router-link></li>
+        <li class="hmenu__toggle-menu-subitem"><router-link to="/Portrait/Jeremiasz" exact>Sandrine Martinet-Auriès</router-link></li>
+        <li class="hmenu__toggle-menu-item"><router-link to="/About" exact>A propos</router-link></li>
       </ul>
     </div>
   </div>

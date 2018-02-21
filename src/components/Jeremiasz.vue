@@ -1,6 +1,5 @@
 <template>
   <div class="portrait">
-    <portrait-header></portrait-header>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>

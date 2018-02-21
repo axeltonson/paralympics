@@ -3,7 +3,7 @@
     <span class="about__title">About</span>
     <h1><span>The real</span> heroes</h1>
     <p>The real  heroes  is … Cras justo odio, dapibus ac facilisis in, egestas eget</p>
-    <div class=""
+    <div class=""></div>
   </div>
 </template>
 
