@@ -26,15 +26,19 @@ export default {
   },
   methods: {
     handleScroll: function (event) {
-      if (event.deltaY < 0) {
-        console.log('scrolling up')
-        window.removeEventListener('wheel', this.handleScroll)
-        this.scrollUp()
-      }
-      if (event.deltaY > 0) {
-        console.log('scrolling down')
-        window.removeEventListener('wheel', this.handleScroll)
-        this.scrollDown()
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        if (event.deltaY < 0) {
+          console.log('scrolling up')
+          window.removeEventListener('wheel', this.handleScroll)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollUp()
+        }
+        if (event.deltaY > 0) {
+          console.log('scrolling down')
+          window.removeEventListener('wheel', this.handleScroll)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollDown()
+        }
       }
     },
     scrollUp: function () {
@@ -51,6 +55,9 @@ export default {
   },
   created: function () {
     window.addEventListener('wheel', this.handleScroll)
+    setTimeout(function () {
+      document.querySelector('#app').classList.remove('animate')
+    }, 2000)
   }
 }
 </script>

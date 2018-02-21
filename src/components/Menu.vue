@@ -13,11 +13,11 @@
     <div class="hmenu__toggle">
       <ul class="hmenu__toggle-menu">
         <li class="hmenu__toogle-menu-title">Menu</li>
-        <li class="hmenu__toggle-menu-item"><router-link to="/Select" exact>Les héros</router-link></li>
-        <li class="hmenu__toggle-menu-subitem"><router-link to="/Portrait/Le-fur" exact>Marie-Amélie Lefur</router-link></li>
-        <li class="hmenu__toggle-menu-subitem"><router-link to="/Portrait/Jeremiasz" exact>Michael Jeremiasz</router-link></li>
-        <li class="hmenu__toggle-menu-subitem"><router-link to="/Portrait/Jeremiasz" exact>Sandrine Martinet-Auriès</router-link></li>
-        <li class="hmenu__toggle-menu-item"><router-link to="/About" exact>A propos</router-link></li>
+        <li class="hmenu__toggle-menu-item" @click="toggle"><router-link to="/Select" exact>Les héros</router-link></li>
+        <li class="hmenu__toggle-menu-subitem" @click="toggle"><router-link to="/Portrait/Le-fur" exact>Marie-Amélie Lefur</router-link></li>
+        <li class="hmenu__toggle-menu-subitem" @click="toggle"><router-link to="/Portrait/Jeremiasz" exact>Michael Jeremiasz</router-link></li>
+        <li class="hmenu__toggle-menu-subitem" @click="toggle"><router-link to="/Portrait/Jeremiasz" exact>Sandrine Martinet-Auriès</router-link></li>
+        <li class="hmenu__toggle-menu-item" @click="toggle"><router-link to="/About" exact>A propos</router-link></li>
       </ul>
     </div>
   </div>
@@ -140,6 +140,7 @@ h1.hmenu__main-title{
   list-style-type: none;
   font-weight: lighter;
   opacity: 0.8;
+  display: inline-block;
 }
 .hmenu__toggle-menu-subitem a{
   text-decoration: none;

@@ -6,43 +6,50 @@
      <div class="select__content">
         <div class="select__content-items">
 
-           <div class="select__item" id="selectLeft">
-             <img src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
-             <div class="select__item-title">
-               <div class="select__item-nickname-container">
-                 <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+          <div class="select__item select-martinet" id="selectLeft">
+            <img class="select__item-image" src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
+            <div class="select__item-content">
+              <div class="select__item-title">
+                <div class="select__item-nickname-container">
+                  <div class="dash"></div>
+                  <span class="select__item-nickname">&laquo Le phoenix &raquo</span>
+                </div>
+                <h1 class="select__item-title">Sandrine Martinet-Aurières</h1>
+              </div>
+              <div class="select__item-subtitle">
+                <p>Judo</p>
+              </div>
+            </div>
+          </div>
+           <div class="select__item select-lefur" id="selectCenter">
+             <img class="select__item-image" src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
+             <div class="select__item-content">
+               <div class="select__item-title">
+                 <div class="select__item-nickname-container">
+                   <div class="dash"></div>
+                   <span class="select__item-nickname">&laquo Le guépard &raquo</span>
+                 </div>
+                 <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
                </div>
-               <h1 class="select__item-title">Marie-Amélie Le Fur</h1>
-             </div>
-             <div class="select__item-subtitle">
-               <p>Longueur, 100 m, 200 m, 400 m </p>
-               <p>Athlétisme</p>
+               <div class="select__item-subtitle">
+                 <p>Longueur, 100 m, 200 m, 400 m </p>
+                 <p>Athlétisme</p>
+               </div>
              </div>
            </div>
-           <div class="select__item" id="selectCenter">
-             <img src="../assets/img/Portrait_jeremiasz.png" alt="Michael Jeremiasz">
-             <div class="select__item-title">
-               <div class="select__item-nickname-container">
-                 <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le militant &raquo</span>
+           <div class="select__item select-jeremiasz" id="selectRight">
+             <img class="select__item-image" src="../assets/img/Portrait_jeremiasz.png" alt="Michael Jeremiasz">
+             <div class="select__item-content">
+               <div class="select__item-title">
+                 <div class="select__item-nickname-container">
+                   <div class="dash"></div>
+                   <span class="select__item-nickname">&laquo Le militant &raquo</span>
+                 </div>
+                 <h1 class="select__item-title">Michael Jeremiasz</h1>
                </div>
-               <h1 class="select__item-title">Michael Jeremiasz</h1>
-             </div>
-             <div class="select__item-subtitle">
-               <p>Tennis</p>
-             </div>
-           </div>
-           <div class="select__item" id="selectRight">
-             <div class="select__item-title">
-               <div class="select__item-nickname-container">
-                 <div class="dash"></div>
-                 <span class="select__item-nickname">&laquo Le phoenix &raquo</span>
+               <div class="select__item-subtitle">
+                 <p>Tennis</p>
                </div>
-               <h1 class="select__item-title">Sandrine Martinet-Aurières</h1>
-             </div>
-             <div class="select__item-subtitle">
-               <p>Judo</p>
              </div>
            </div>
 
@@ -105,19 +112,17 @@ export default {
     //   document.getElementById('selectHero').setAttribute('h_id', heroId)
     // },
     handleScroll: function (event) {
-      if (event.deltaY < 0) {
-        console.log('scrolling up')
+      if ((event.deltaY < 0) && (document.querySelector('#app').classList.contains('animate') === false)) {
         window.removeEventListener('wheel', this.handleScroll)
+        document.querySelector('#app').classList.add('animate')
         this.scrollUp()
       }
-      if (event.deltaY > 0) {
-        console.log('scrolling down')
+      if ((event.deltaY > 0) && (document.querySelector('#app').classList.contains('animate') === false)) {
         window.removeEventListener('wheel', this.handleScroll)
         this.scrollDown()
       }
     },
     scrollUp: function () {
-      console.log('scrolling up 2')
       this.$router.push('/intro')
     },
     scrollDown: function () {
@@ -130,7 +135,6 @@ export default {
       } else {
         heroPath = 'Jeremiasz'
       }
-      console.log('scrolling down 2')
       this.$router.push('/Portrait/' + heroPath)
     },
     clickEvent: function (event) {
@@ -139,6 +143,9 @@ export default {
   },
   created: function () {
     window.addEventListener('wheel', this.handleScroll)
+    setTimeout(function () {
+      document.querySelector('#app').classList.remove('animate')
+    }, 2000)
   }
 }
 </script>
@@ -169,6 +176,7 @@ body{
   width: 100%;
   height: 100%;
   background-color: #000000;
+  overflow: hidden;
 }
 
 .select__content{
@@ -185,6 +193,7 @@ body{
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   text-align: left;
 }
@@ -210,13 +219,15 @@ body{
 .select__item{
   position: absolute;
   z-index: 1;
-  bottom: 25%;
+  bottom: 0;
   left: 0;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: 0.7s;
+  height: 100%;
+  width: 100%
 }
 #selectLeft{
-  transform: perspective(400px) translate3d(-80px, 0px, -100px);
+  transform: perspective(300px) translate3d(-200px, 0px, -200px);
 }
 /* #selectLeft img{
   background-color: yellow;
@@ -227,31 +238,31 @@ body{
   opacity: 1;
 }
 #selectRight{
-  transform: perspective(400px) translate3d(80px, 0px, -100px);
+  transform: perspective(300px) translate3d(250px, 0px, -200px);
 }
-/* #selectRight img{
-  background-color: green;
-} */
 
-.select__item-image{
-  // position: absolute;
-  // top: 0;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // width: 100px;
-  // height: 100px;
-  // background-color: red;
-  // border: 0;
-}
+
 .select__item-content{
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  color: white;
-  text-align: center;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
 }
+#selectCenter .select__item-content{
+  opacity: 1;
+}
+
+.select__item-image{
+  position: absolute;
+  bottom: 0;
+}
+
+.select-jeremiasz .select__item-image{
+  bottom: 10%;
+}
+
 .select__item-nickname{
   font-size: 25px;
   padding-left: 38px;
@@ -273,6 +284,10 @@ body{
 .select__item-subtitle p{
   font-size: 14px;
   margin: 8px 0;
+}
+
+.select-martinet .select__item-title{
+  font-size: 30px;
 }
 
 /* Enter and Leave transitions */
