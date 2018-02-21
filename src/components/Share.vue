@@ -1,7 +1,6 @@
 <template>
     <div class="share">
       <div class="share--open-close" @click="toggleSharingButtons">
-        <!-- TODO: Animation du bouton de menu à faire -->
         <svg class="share--open" xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20">
           <path fill="#2D2D2D" fill-rule="nonzero" d="M14.063 14.78c-.533 0-1.022.178-1.419.476l-7.33-4.548a2.385 2.385 0 0 0-.028-1.495l7.058-4.735a2.365 2.365 0 0 0 1.719.742 2.387 2.387 0 0 0 2.378-2.39A2.387 2.387 0 0 0 14.063.44a2.387 2.387 0 0 0-2.3 2.99L4.625 8.22a2.358 2.358 0 0 0-1.582-.61A2.387 2.387 0 0 0 .665 10a2.387 2.387 0 0 0 2.378 2.39c.638 0 1.217-.256 1.644-.668l7.206 4.472a2.39 2.39 0 0 0 2.17 3.365 2.387 2.387 0 0 0 2.378-2.39 2.387 2.387 0 0 0-2.378-2.39z"/>
         </svg>
