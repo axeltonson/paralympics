@@ -1,6 +1,8 @@
 <template>
   <div>
-    <info></info>
+    <div class="info-component">
+      <info></info>
+    </div>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -167,12 +169,27 @@
 <script>
   import Instagram from '@/components/Instagram'
   import Info from '@/components/Info'
+  const basicScroll = require('basicscroll')
 
   export default {
     name: 'Le-fur',
     components: {
       Instagram,
       Info
+    },
+    mounted: function () {
+      const instance = basicScroll.create({
+        elem: document.querySelector('.portrait__part2'),
+        from: 'top-middle',
+        to: 'bottom-middle',
+        inside: (instance, percentage, props) => {
+          document.querySelector('.info-component').classList.add('is-active')
+        },
+        outside: (instance, percentage, props) => {
+          document.querySelector('.info-component').classList.remove('is-active')
+        }
+      })
+      instance.start()
     }
   }
 </script>
@@ -194,6 +211,13 @@
     font-weight: 700;
     text-transform: uppercase;
     margin: 20px 0 10px;
+  }
+
+  .info-component {
+    display: none;
+    &.is-active {
+      display: block;
+    }
   }
 
   .link-bold {
