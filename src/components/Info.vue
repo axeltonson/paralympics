@@ -7,9 +7,12 @@
       <p class="info-container-text">Je veux me venger et passer le reste de mes jours dans l’amertume ? Ou se remettre à vivre, mais pas comme avant. Le handicap est présent dans le cerveau, le corps et la mémoire de soi.</p>
     </div>
     <div class="info-container__button" @click="showMore">
-      <div class="info__button-asset">
-        <svg width="19px" height="12px" viewBox="0 0 19 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+      <div class="info__button-asset" v-bind:class="{ active : isActive }">
+        <span class='span-1'></span>
+        <span class='span-2'></span>
+        <span class='span-3'></span>
+      </div>
+        <!-- <svg width="19px" height="12px" viewBox="0 0 19 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>30E5B1B3-1F15-40F5-9FA4-585AC91B690A</title>
             <desc>Created with sketchtool.</desc>
             <defs></defs>
@@ -22,11 +25,10 @@
                     </g>
                 </g>
             </g>
-        </svg>
+        </svg> -->
+        <p class="info-button__word">Résilience</p>
       </div>
-      <p class="info-button__word">Résilience</p>
     </div>
-  </div>
 </template>
 
 <script>
@@ -68,7 +70,7 @@ export default {
   z-index: $z-index-info;
   color: $black;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .info-container__content {
@@ -113,5 +115,38 @@ export default {
   font-weight: bold;
   letter-spacing: 3.5px;
 }
+
+.info__button-asset {
+  padding: 0 15px;
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.info__button-asset span{
+  background-color: $black; 
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  transition: 0.3s;
+  &.span-2 {
+    width: 14px;
+  }
+  &.span-3 {
+    width: 9px;
+  }
+}
+.info__button-asset:last-child{
+  margin-bottom: 0;
+}
+/* .active .hmenu__main-button span{width: 30px; border-radius: 2px; transition: 0.2s}
+.active .hmenu__main-button span + span{width: 38px; transition: 0.3s}
+.active .hmenu__main-button span + span + span{width: 23px; transition: 0.1s} */
+.info__button-asset.active span{width: 20px; height: 3px; border-radius: 2px; transition: 0.2s; transform: rotate(-45deg); transform-origin: right;}
+.info__button-asset.active  span + span{width: 0px; transform: rotate(-45deg); margin-right: 8px;}
+.info__button-asset.active  span + span + span{width: 20px; transform: rotate(45deg); transform-origin: right; margin-right: 0;}
 
 </style>
