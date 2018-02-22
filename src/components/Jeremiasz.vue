@@ -192,6 +192,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
   }
   h1 {
     line-height: 0.91;
+       @media #{$desktop} {
+        margin-top: 100px;
+        }
   }
   h3 {
     font-size: 20px;
@@ -212,9 +215,14 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     top: 0;
     width: 100%;
     height: 100vh;
-    background: url("../assets/img/portrait_jeremiasz@2x.png") 0 50px no-repeat;
+    background: url("../assets/img/portrait_jeremiasz.png") 0 50px no-repeat;
     background-size: cover;
     z-index: $z-index-portrait-bg;
+     @media #{$desktop} {
+      background: url("../assets/img/portrait_jeremiasz@2x.png") top right no-repeat; 
+      background-size: 700px;
+      height: 1524px;
+    }
   }
 
   .portrait__intro-bg-overlay {
@@ -233,6 +241,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     &.is-scrolling {
       margin-top: 50px;
     }
+     @media #{$desktop} {
+      max-width: 455px;
+    }
   }
 
   .portrait-container {
@@ -243,10 +254,23 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     padding: 0 40px;
     color: $white;
     font-size: 22px;
-    font-weight: 300;
-    line-height: 1.3;
+    font-weight: 200;
+    line-height: 1.6;
     z-index: $z-index-portrait-container;
+    @media #{$desktop} {
+      margin: 0 auto;
+      max-width: 946px;
+    }
   }
+
+  .portrait__part1,
+  .portrait__part2,
+  .portrait__part-text-block {
+    @media #{$desktop} {
+      max-width: 598px;
+    }
+  }
+
   .portrait__slider-nickname-container {
     display: flex;
     align-items: center;
@@ -304,6 +328,13 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     margin-bottom: 60px;
     display: flex;
     justify-content: flex-end;
+    @media #{$desktop} {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 724px;
+      height: 408px;
+      margin-left: 350px;
+    }
   }
 
   .portrait__part1-video-youtube {
@@ -334,29 +365,37 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
   .portrait__part1-image {
     width: 100%;
     height: 500px;
-    background: url('../assets/img/222138-1080p@2x.png') top no-repeat;
+    background: url('../assets/img/222138-1080p.png') top no-repeat;
     background-size: 200%;
+    @media #{$tablet} {
+      background: url('../assets/img/222138-1080p@2x.png') center no-repeat;
+      background-size: 80%;
+      height: 980px;
+    }
   }
 
   .portrait__part2-image {
     width: 100%;
     height: 667px;
-    background: url('../assets/img/mj-2@2x.png') center no-repeat;
+    background: url('../assets/img/mj-2.png') center no-repeat;
     background-size: 200%;
+    @media #{$tablet} {
+      height: 1024px;
+      background: url('../assets/img/mj-2@2x.png') center no-repeat;
+      background-size: 100%;
+    }
   }
 
   .portrait__part3-image {
     width: 100%;
     height: 670px;
-    background: url("../assets/img/portrait_jeremiasz@2x.png") 0 50px no-repeat;
+    background: url("../assets/img/portrait_jeremiasz.png") 0 50px no-repeat;
     background-size: cover;
-  }
-
-  .portrait__instamoment {
-    width: 100%;
-    height: 280px;
-    opacity: 0.87;
-    background-color: #8a3ab9;
+      @media #{$tablet} {
+      height: 980px;
+      background: url('../assets/img/portrait_jeremiasz@2x.png') center no-repeat;
+      background-size: 40%;
+    }
   }
 
   .portrait__part-text-block-end {
@@ -366,7 +405,11 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
   .portrait__part4-image {
     width: 100%;
     height: 667px;
-    background: url('../assets/img/Michael-Jeremiasz-champion-de-tennis-fauteuil@2x.png') center no-repeat;
+    background: url('../assets/img/Michael-Jeremiasz-champion-de-tennis-fauteuil.png') center no-repeat;
     background-size: 300%;
+    @media #{$tablet} {
+      background: url('../assets/img/Michael-Jeremiasz-champion-de-tennis-fauteuil@2x.png') center no-repeat;
+      background-size: 100%;
+    }
   }
 </style>

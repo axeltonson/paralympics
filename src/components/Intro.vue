@@ -3,17 +3,18 @@
     <div class="vue intro" v-on:click="clickEvent">
        <div class="intro__content">
           <p class="intro__content-text">
-             The real hero is... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-             Vivamus quis neque sem. Quisque quis accumsan sapien. Nunc pellentesque elit
-             sed auctor rhoncus.
+             Trois sportif·ve·s français à la volonté extraordinaire,
+             véritables héros des temps modernes
           </p>
-          <div class="intro__content-scroll">
+        </div>
+        <div class="overlay__top"></div>
+        <div class="overlay__bottom"></div>
+        <div class="intro__content-scroll">
              <p class="intro__content-scroll-text">
                Scroll to<br> explore
              </p>
              <div class="intro__content-scroll-line"></div>
           </div>
-      </div>
     </div>
   </transition>
 </template>
@@ -102,27 +103,57 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 300px;
+   width: 100%;
    height: 100%;
    margin: 0 auto;
 }
+   @media #{$tablet} {
+      // EXEMPLE DE MEDIA QUERY
+    }
+    
 .intro__content-text{
    width: 100%;
-   padding: 35px 25px 0;
+   padding: 0 70px;
    font-size: 20px;
-  font-weight: 200;
+   font-weight: 300;
    text-align: center;
    color: #ffffff;
    line-height: 1.5;
    font-family: 'Source Sans Pro', Arial;
+    @media #{$desktop} {
+      padding: 0;
+      width: 460px;
+    }
 }
+
+  .overlay__top {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
+
+  .overlay__bottom {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 215px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
 
 .intro__content-scroll{
    position: absolute;
+   z-index: $z-index-above-items;
    bottom: 0;
-   left: 0;
+   left: 40px;
    width: 100%;
    text-align: left;
+    @media #{$desktop} {
+      left: 100px;
+    }
 }
 .intro__content-scroll-text{
   width: 80px;
