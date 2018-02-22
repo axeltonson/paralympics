@@ -502,7 +502,7 @@
     background-size: 250%;
      @media #{$tablet} {
       background: url('../assets/img/2016-rio-paralympics-day-5-2@2x.png') top no-repeat;
-    background-size: 80%;
+      background-size: 80%;
     }
   }
 </style>
