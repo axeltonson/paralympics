@@ -192,6 +192,7 @@
         from: 'top-middle',
         to: 'bottom-top',
         inside: (instance, percentage, props) => {
+          document.querySelector('.info-component').classList.add('is-active')
         },
         outside: (instance, percentage, props) => {
           document.querySelector('.info-component').classList.remove('is-active')
