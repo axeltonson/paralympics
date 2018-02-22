@@ -237,7 +237,6 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
   }
 
   .portrait-container {
-    margin: 20px 0;
     position: relative;
     display: flex;
     flex-direction: column;
