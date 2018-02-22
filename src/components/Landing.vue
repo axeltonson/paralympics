@@ -70,6 +70,7 @@ export default {
   text-align: center;
   margin-top: 106px;
     @media #{$tablet} {
+      padding-top: 40px;
       margin: 0 auto; 
     }
 }

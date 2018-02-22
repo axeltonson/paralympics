@@ -38,7 +38,7 @@
              </div>
            </div>
            <div class="select__item select-jeremiasz" id="selectRight">
-             <img class="select__item-image" src="../assets/img/Portrait_jeremiasz.png" alt="Michael Jeremiasz">
+             <img class="select__item-image" src="../assets/img/portrait_jeremiasz.png" alt="Michael Jeremiasz">
              <div class="select__item-content">
                <div class="select__item-title">
                  <div class="select__item-nickname-container">
