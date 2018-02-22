@@ -1,9 +1,12 @@
 <template>
   <div class="landing">
-    <span class="discover">Discover</span>
-    <h1><span>The real</span> heroes</h1>
-    <p class='landing-text'>The real  heroes c’est l’histoire de personnes et de parcours hors du commun…</p>
-    <router-link to="Intro" class="button">Enter</router-link>
+    <div class="landing-overlay-bg"></div>
+      <div class="landing-overlay-content">
+        <p class="discover">Discover</p>
+        <h1><span>The real</span></br>heroes</h1>
+        <p class='landing-text'>The real  heroes c’est l’histoire de personnes et de parcours hors du commun…</p>
+        <router-link to="Intro" class="button">Enter</router-link>
+      </div>
   </div>
 </template>
 
@@ -19,32 +22,61 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .landing {
-  text-align: center;
-  padding: 27% 50px 50px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+.landing-overlay-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $black;
+  opacity: 0.2;
+  @media #{$tablet} {
+      background: url('../assets/img/person-runner-sport.jpg') no-repeat;
+      background-size: cover; 
+    }
+}
+
 .discover {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2.8px;
+  text-align: center;
+  margin-top: 106px;
+    @media #{$tablet} {
+      margin: 0 auto; 
+    }
 }
+
 h1 {
   font-size: 53px;
   font-weight: bold;
   margin: 20px 0 50px;
+  text-align: center;
   span {
     font-size: 48px;
     font-weight: 300;
   }
+   @media #{$tablet} {
+
+      font-size: 96px;
+    }
 }
 p {
   padding: 0 15px;
 }
 
 .landing-text {
-  font-weight: 400;
-  margin: 0 auto;
+  padding: 0 70px;
+  font-weight: 200;
   text-align: center;
+  margin: 0 auto;
   font-size: 18px;
   max-width: 335px;
   line-height: 1.5;
@@ -60,6 +92,7 @@ p {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 3.5px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
