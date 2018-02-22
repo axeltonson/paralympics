@@ -493,4 +493,21 @@
   opacity: 1;
 }
 
+.v-enter {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.v-enter-active {
+  /* opacity: 1; */
+  transition: opacity 1s;
+}
+.v-enter {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.v-leave-active {
+  /* opacity: 0; */
+  transition: opacity 1s;
+}
+
 </style>

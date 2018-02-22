@@ -18,6 +18,14 @@ export default {
     return {}
   },
   methods: {
+    navKey: function (event) {
+      if (event.keyCode === 37) {
+        this.selectLeft()
+      }
+      if (event.keyCode === 39) {
+        this.selectRight()
+      }
+    },
     selectLeft: function () {
       if (document.getElementById('selectHero')) {
         document.getElementById('selectLeft').id = 'sCenter'
@@ -56,6 +64,9 @@ export default {
       }
       document.getElementById('selectHero').setAttribute('h_id', heroId)
     }
+  },
+  created: function () {
+    window.addEventListener('keydown', this.navKey)
   }
 }
 </script>
