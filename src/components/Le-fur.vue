@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="info-component">
-      <info></info>
-    </div>
+    <transition name="slide-in">
+      <info v-if="isDisplayingInfo"></info>
+    </transition>
     <div class="portrait__intro-bg">
-      <div class="portrait__intro-bg-overlay"></div>
+      <div class="portrait__intro-bg-overlay"></div >
     </div>
     <div class="portrait-container">
       <div class="portrait__intro is-scrolling">
@@ -183,19 +183,20 @@
         videoId: '2_vPxntIHI8',
         playerVars: {
           controls: 1
-        }
+        },
+        isDisplayingInfo: false
       }
     },
     mounted: function () {
       const instance = basicScroll.create({
         elem: document.querySelector('.portrait__part2'),
-        from: 'top-middle',
+        from: 'top-bottom',
         to: 'bottom-middle',
         inside: (instance, percentage, props) => {
-          document.querySelector('.info-component').classList.add('is-active')
+          this.isDisplayingInfo = true
         },
         outside: (instance, percentage, props) => {
-          document.querySelector('.info-component').classList.remove('is-active')
+          this.isDisplayingInfo = false
         }
       })
       instance.start()
@@ -238,12 +239,17 @@
     margin: 20px 0 10px;
   }
 
-  .info-component {
-    display: none;
-    &.is-active {
-      display: block;
-    }
-  }
+.slide-in-enter-active {
+  transition: all .3s ease;
+}
+.slide-in-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-in-enter, .slide-in-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(100px);
+  opacity: 0;
+}
 
   .link-bold {
     font-weight: 600;

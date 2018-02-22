@@ -3,7 +3,7 @@
     <div class="landing-overlay-bg"></div>
       <div class="landing-overlay-content">
         <p class="discover">Discover</p>
-        <h1><span>The real</span></br>heroes</h1>
+        <h1><span>The real</span><br>heroes</h1>
         <p class='landing-text'>The real  heroes c’est l’histoire de personnes et de parcours hors du commun…</p>
         <router-link to="Intro" class="button">Enter</router-link>
       </div>
