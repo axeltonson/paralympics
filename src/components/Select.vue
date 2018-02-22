@@ -23,6 +23,7 @@
           </div>
            <div class="select__item select-lefur" id="selectCenter">
              <img class="select__item-image" src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
+             <img class="portrait__intro-gif-a" src="../assets/img/mask.gif" alt="masque de super héro de Amélie">
              <div class="select__item-content">
                <div class="select__item-title">
                  <div class="select__item-nickname-container">
@@ -39,6 +40,7 @@
            </div>
            <div class="select__item select-jeremiasz" id="selectRight">
              <img class="select__item-image" src="../assets/img/portrait_jeremiasz.png" alt="Michael Jeremiasz">
+              <img class="portrait__intro-gif-m" src="../assets/img/mask-j.gif" alt="masque de super héro de Michael">      
              <div class="select__item-content">
                <div class="select__item-title">
                  <div class="select__item-nickname-container">
@@ -189,6 +191,25 @@ body{
 /* FIN A SUPPRIMER */
 
 
+.portrait__intro-gif-a {
+    position: absolute;
+    top: 60px;
+    width: 90%;
+    left: -10px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
+  .portrait__intro-gif-m {
+    position: absolute;
+    width: 110%;
+    top: 160px;
+    left: -20px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
 
 .select{
   width: 100%;
