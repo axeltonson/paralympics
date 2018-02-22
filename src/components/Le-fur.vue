@@ -62,9 +62,10 @@
           On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012.
         </p>
         <div class="portrait__part1-video">
-          <div class="portrait__part1-video-youtube">
+          <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing" width="246" height="138"></youtube>
+          <!-- <div class="portrait__part1-video-youtube" @click="playVideo">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
-          </div>
+          </div> -->
         </div>
         <div class="portrait__part-text-block">
           <p class="portrait__part-text">Ce jour là, elle n’entend plus que la Marseillaise, autour d’elle, le fourmillement, l’excitation, la pression. Elle atteint alors les 5 derniers mètres de la course. Elle sent les autres coureuses revenir sur ses talons, elle se penche pour atteindre
@@ -177,19 +178,39 @@
       Instagram,
       Info
     },
+    data () {
+      return {
+        videoId: '2_vPxntIHI8',
+        playerVars: {
+          controls: 1
+        }
+      }
+    },
     mounted: function () {
       const instance = basicScroll.create({
         elem: document.querySelector('.portrait__part2'),
         from: 'top-middle',
-        to: 'bottom-middle',
+        to: 'bottom-top',
         inside: (instance, percentage, props) => {
-          document.querySelector('.info-component').classList.add('is-active')
         },
         outside: (instance, percentage, props) => {
           document.querySelector('.info-component').classList.remove('is-active')
         }
       })
       instance.start()
+    },
+    methods: {
+      playVideo () {
+        this.player.playVideo()
+      },
+      playing () {
+        console.log('we are watching!!!')
+      }
+    },
+    computed: {
+      player () {
+        return this.$refs.youtube.player
+      }
     }
   }
 </script>
@@ -264,7 +285,7 @@
     padding: 0 40px;
     color: $white;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.3;
     z-index: $z-index-portrait-container;
   }
@@ -371,22 +392,11 @@
 
   .portrait__part1-video {
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
-  }
-
-  .portrait__part1-video-youtube {
-    position: relative;
-    background-color: $white;
-    width: 246px;
+    width: 100%;
     height: 138px;
-  }
-
-  .portrait__part1-video-youtube-controls {
-    position: absolute;
-    left: -30px;
-    bottom: -15px;
   }
 
   .portrait__part-text {

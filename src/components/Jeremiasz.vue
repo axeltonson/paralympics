@@ -70,10 +70,11 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
           </p>
         </div>
       </div>
-         <div class="portrait__part-video">
-          <div class="portrait__part1-video-youtube">
+        <div class="portrait__part-video">
+          <youtube :video-id="videoId1" ref="youtube" :player-vars="playerVars" @playing="playing"></youtube>
+          <!-- <div class="portrait__part1-video-youtube">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
-          </div>
+          </div> -->
         </div>
       <div class="portrait-container">
         <div class="portrait__part-text-block">
@@ -131,9 +132,10 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     </div>
 
     <div class="portrait__part-video">
-          <div class="portrait__part2-video-youtube">
+        <youtube :video-id="videoId2" ref="youtube" :player-vars="playerVars" @playing="playing"></youtube>
+          <!-- <div class="portrait__part2-video-youtube">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
-          </div>
+          </div> -->
     </div>
 
     <div class="portrait-container">
@@ -159,7 +161,26 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
       PortraitHeader
     },
     data () {
-      return {}
+      return {
+        videoId1: '-mYIJKhOXAw',
+        videoId2: '-sbx3qccwnU',
+        playerVars: {
+          controls: 1
+        }
+      }
+    },
+    methods: {
+      playVideo () {
+        this.player.playVideo()
+      },
+      playing () {
+        console.log('we are watching!!!')
+      }
+    },
+    computed: {
+      player () {
+        return this.$refs.youtube.player
+      }
     }
   }
 </script>
@@ -223,7 +244,7 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     padding: 0 40px;
     color: $white;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.3;
     z-index: $z-index-portrait-container;
   }
