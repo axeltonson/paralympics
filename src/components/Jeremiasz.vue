@@ -1,6 +1,7 @@
 <template>
   <div class="portrait">
     <div class="portrait__intro-bg">
+      <img class="portrait__intro-gif" src="../assets/img/mask-j.gif" alt="masque de super héro de Michael">      
       <div class="portrait__intro-bg-overlay"></div>
     </div>
     <div class="portrait-container">
@@ -120,7 +121,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
       </div>
     </div>
 
-    <div class="portrait__part3-image"></div>
+    <div class="portrait__part3-image">
+      <img class="portrait__part3-gif" src="../assets/img/mask-j.gif" alt="masque de super héro de Michael">
+    </div>
 
     <div class="portrait-container">
       <div class="portrait__part-text-block">
@@ -225,6 +228,27 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     }
   }
 
+  .portrait__intro-gif {
+    position: absolute;
+    width: 130%;
+    top: 50px;
+    left: -30px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
+  .portrait__part3-gif {
+    position: relative;
+    width: 130%;
+    top: 50px;
+    left: -30px;
+    @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
+
   .portrait__intro-bg-overlay {
     width: 100%;
     height: 100%;
@@ -244,6 +268,10 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
      @media #{$desktop} {
       max-width: 455px;
     }
+  }
+
+  .portrait__intro-bg {
+    overflow: hidden;
   }
 
   .portrait-container {
@@ -391,6 +419,7 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     height: 670px;
     background: url("../assets/img/portrait_jeremiasz.png") 0 50px no-repeat;
     background-size: cover;
+    overflow: hidden;
       @media #{$tablet} {
       height: 980px;
       background: url('../assets/img/portrait_jeremiasz@2x.png') center no-repeat;

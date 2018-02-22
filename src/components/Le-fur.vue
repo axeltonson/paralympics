@@ -4,6 +4,7 @@
       <info v-if="isDisplayingInfo"></info>
     </transition>
     <div class="portrait__intro-bg">
+      <img class="portrait__intro-gif" src="../assets/img/mask.gif" alt="masque de super héro de Amélie">
       <div class="portrait__intro-bg-overlay"></div >
     </div>
     <div class="portrait-container">
@@ -77,7 +78,9 @@
       </div>
     </div>
 
-    <div class="portrait__part1-image"></div>
+    <div class="portrait__part1-image">
+      <img class="portrait__part1-gif" src="../assets/img/cape.gif" alt="cape de super héro de Amélie">
+    </div>
 
     <div class="portrait-container">
       <div class="portrait__part-text-block">
@@ -287,6 +290,25 @@
     }
   }
 
+  .portrait__intro-gif {
+    position: absolute;
+    width: 90%;
+    left: 20px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
+  .portrait__part1-gif {
+    position: relative;
+    width: 120%;
+    left: -70px;
+    top: 150px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
   .portrait__intro-bg-overlay {
     width: 100%;
     height: 100%;
@@ -459,6 +481,7 @@
     height: 650px;
     background: url('../assets/img/malf-tpe-site2.png') top no-repeat;
     background-size: 200%;
+    overflow: hidden;
      @media #{$tablet} {
       background: url('../assets/img/malf-tpe-site2@2x.png') center no-repeat;
       background-size: 80%;
