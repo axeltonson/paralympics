@@ -45,11 +45,13 @@
            </div>
 
         </div>
+    </div>
+    <div class="overlay__top"></div>
+        <div class="overlay__bottom"></div>
         <div class="select__content-scroll">
           <p class="select__content-scroll-text">Scroll to<br> explore</p>
           <div class="select__content-scroll-line"></div>
         </div>
-    </div>
   </div>
   </transition>
 </template>
@@ -177,14 +179,22 @@ body{
   width: 300px;
   height: 100%;
   margin: 0 auto;
+   @media #{$desktop} {
+      left: 100px;
+      max-width: 600px;
+    }
 }
 
 .select__content-scroll{
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: left;
+   z-index: $z-index-above-items;
+   bottom: 0;
+   left: 40px;
+   width: 100%;
+   text-align: left;
+    @media #{$desktop} {
+      left: 100px;
+    }
 }
 .select__content-scroll-text{
   font-size: 11px;
@@ -272,6 +282,24 @@ body{
   font-size: 14px;
   margin: 8px 0;
 }
+
+.overlay__top {
+  z-index: $z-index-above-items - 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+}
+
+  .overlay__bottom {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 215px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
 
 /* Enter and Leave transitions */
 .v-enter {
