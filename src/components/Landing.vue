@@ -2,7 +2,7 @@
   <div class="landing">
     <span class="discover">Discover</span>
     <h1><span>The real</span> heroes</h1>
-    <p>The real  heroes  is … Cras justo odio, dapibus ac facilisis in, egestas eget</p>
+    <p class='landing-text'>The real  heroes c’est l’histoire de personnes et de parcours hors du commun…</p>
     <router-link to="Intro" class="button">Enter</router-link>
   </div>
 </template>
@@ -40,6 +40,16 @@ h1 {
 p {
   padding: 0 15px;
 }
+
+.landing-text {
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  max-width: 335px;
+  line-height: 1.5;
+}
+
 .button {
   position: fixed;
   bottom: 75px;
