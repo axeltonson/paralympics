@@ -161,6 +161,19 @@
       </p>
       <div class="select__content-scroll-line"></div>
     </div>
+
+    <div class="portrait__etapes">
+      <div class="portrait__etapes-header">
+        <p class="portrait__etapes-name">Marie-Amélie Le fur</p>
+        <p class="portrait__etapes-title">La victroire</p>
+      </div>
+      <ul class="portrait__etapes-content">
+        <li class="portrait__etapes-item">1ère partie</li>
+        <li class="portrait__etapes-item">2ème partie</li>
+        <li class="portrait__etapes-item">3ème partie</li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
@@ -427,4 +440,57 @@
     background: url('../assets/img/2016-rio-paralympics-day-5-2@2x.png') 45% 50px no-repeat;
     background-size: 250%;
   }
+
+.portrait__etapes{
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.portrait__etapes.active{
+  opacity: 1;
+  bottom: 20px;
+}
+.portrait__etapes-header{
+  font-size: 14px;
+  position: relative;
+}
+.portrait__etapes-header::after{
+  content: " ";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 1px;
+  background-color: #ffffff;
+}
+.portrait__etapes-name{
+  opacity: 0.4;
+}
+.portrait__etapes-title{
+
+}
+.portrait__etapes-content{
+  margin: 18px 0 5px 0;
+  padding: 0;
+}
+.portrait__etapes-item{
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  transition: 0.5s;
+  letter-spacing: 1.7px;
+}
+.portrait__etapes.active .portrait__etapes-item{
+  opacity: 1;
+}
+
 </style>
