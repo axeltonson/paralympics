@@ -175,10 +175,10 @@ body{
   padding: 0;
 }
 
-#app, .vue{
-  height: 100%;
-  width: 100%;
-}
+// #app, .vue{
+//   height: 100%;
+//   width: 100%;
+// }
 
 .vue{
   transition: opacity 1s;

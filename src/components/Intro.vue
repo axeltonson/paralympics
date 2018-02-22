@@ -84,10 +84,10 @@ body{
    padding: 0;
 }
 
-#app, .vue{
+/* #app, .vue{
    height: 100%;
    width: 100%;
-}
+} */
 
 /* FIN A SUPPRIMER */
 
