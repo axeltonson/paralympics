@@ -41,6 +41,7 @@ export default {
 <style lang="scss" scoped>
 
 .hmenu{
+  box-sizing: border-box;
   position: fixed;
   z-index: 101;
   top: 0;

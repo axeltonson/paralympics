@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="info-component">
+      <info></info>
+    </div>
     <div class="portrait__intro-bg">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
@@ -59,7 +62,7 @@
           On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012.
         </p>
         <div class="portrait__part1-video">
-          <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing"></youtube>
+          <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing" width="246" height="138"></youtube>
           <!-- <div class="portrait__part1-video-youtube" @click="playVideo">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
           </div> -->
@@ -179,11 +182,14 @@
 
 <script>
   import Instagram from '@/components/Instagram'
+  import Info from '@/components/Info'
+  const basicScroll = require('basicscroll')
 
   export default {
     name: 'Le-fur',
     components: {
-      Instagram
+      Instagram,
+      Info
     },
     data () {
       return {
@@ -192,6 +198,19 @@
           controls: 1
         }
       }
+    },
+    mounted: function () {
+      const instance = basicScroll.create({
+        elem: document.querySelector('.portrait__part2'),
+        from: 'top-middle',
+        to: 'bottom-top',
+        inside: (instance, percentage, props) => {
+        },
+        outside: (instance, percentage, props) => {
+          document.querySelector('.info-component').classList.remove('is-active')
+        }
+      })
+      instance.start()
     },
     methods: {
       playVideo () {
@@ -226,6 +245,13 @@
     font-weight: 700;
     text-transform: uppercase;
     margin: 20px 0 10px;
+  }
+
+  .info-component {
+    display: none;
+    &.is-active {
+      display: block;
+    }
   }
 
   .link-bold {
@@ -265,7 +291,6 @@
   }
 
   .portrait-container {
-    margin: 20px 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -380,22 +405,11 @@
 
   .portrait__part1-video {
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
-  }
-
-  .portrait__part1-video-youtube {
-    position: relative;
-    background-color: $white;
-    width: 246px;
+    width: 100%;
     height: 138px;
-  }
-
-  .portrait__part1-video-youtube-controls {
-    position: absolute;
-    left: -30px;
-    bottom: -15px;
   }
 
   .portrait__part-text {
