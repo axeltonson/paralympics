@@ -244,7 +244,7 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     padding: 0 40px;
     color: $white;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.3;
     z-index: $z-index-portrait-container;
   }
