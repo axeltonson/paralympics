@@ -26,23 +26,37 @@ export default {
   },
   methods: {
     handleScroll: function (event) {
-      if (event.deltaY < 0) {
-        console.log('scrolling up')
-        window.removeEventListener('wheel', this.handleScroll)
-        this.scrollUp()
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        if (event.deltaY < 0) {
+          window.removeEventListener('wheel', this.handleScroll)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollUp()
+        }
+        if (event.deltaY > 0) {
+          window.removeEventListener('wheel', this.handleScroll)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollDown()
+        }
       }
-      if (event.deltaY > 0) {
-        console.log('scrolling down')
-        window.removeEventListener('wheel', this.handleScroll)
-        this.scrollDown()
+    },
+    handleKey: function (event) {
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        if (event.keyCode === 38) {
+          window.removeEventListener('keyup', this.handleKey)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollUp()
+        }
+        if (event.keyCode === 40) {
+          window.removeEventListener('keyup', this.handleKey)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollDown()
+        }
       }
     },
     scrollUp: function () {
-      console.log('scrolling up 2')
       this.$router.push('/')
     },
     scrollDown: function () {
-      console.log('scrolling down 2')
       this.$router.push('/select')
     },
     clickEvent: function (event) {
@@ -51,6 +65,10 @@ export default {
   },
   created: function () {
     window.addEventListener('wheel', this.handleScroll)
+    window.addEventListener('keyup', this.handleKey)
+    setTimeout(function () {
+      document.querySelector('#app').classList.remove('animate')
+    }, 2000)
   }
 }
 </script>
@@ -66,10 +84,10 @@ body{
    padding: 0;
 }
 
-#app, .vue{
+/* #app, .vue{
    height: 100%;
    width: 100%;
-}
+} */
 
 /* FIN A SUPPRIMER */
 

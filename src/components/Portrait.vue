@@ -12,6 +12,9 @@
     name: 'Portrait',
     components: {
       PortraitHeader
+    },
+    created: function () {
+      document.querySelector('#app').classList.remove('animate')
     }
   }
 </script>

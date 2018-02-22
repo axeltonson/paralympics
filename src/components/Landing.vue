@@ -12,6 +12,26 @@ export default {
   name: 'Landing',
   data () {
     return {}
+  },
+  methods: {
+    handleKey: function (event) {
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        if ((event.keyCode === 13) || (event.keyCode === 40)) {
+          window.removeEventListener('keyup', this.handleKey)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollDown()
+        }
+      }
+    },
+    scrollDown: function () {
+      this.$router.push('/intro')
+    }
+  },
+  created: function () {
+    window.addEventListener('keyup', this.handleKey)
+    setTimeout(function () {
+      document.querySelector('#app').classList.remove('animate')
+    }, 2000)
   }
 }
 </script>
