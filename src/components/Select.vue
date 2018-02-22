@@ -311,12 +311,10 @@ body{
   margin: 8px 0;
 }
 
-<<<<<<< HEAD
 .select-martinet .select__item-title{
   font-size: 30px;
 }
 
-=======
 .overlay__top {
   z-index: $z-index-above-items - 1;
   position: fixed;
@@ -335,7 +333,6 @@ body{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
 
->>>>>>> desktop
 /* Enter and Leave transitions */
 .v-enter {
   opacity: 0;
