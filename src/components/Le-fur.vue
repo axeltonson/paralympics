@@ -165,7 +165,7 @@
     <div class="portrait__etapes">
       <div class="portrait__etapes-header">
         <p class="portrait__etapes-name">Marie-Amélie Le fur</p>
-        <p class="portrait__etapes-title">La victroire</p>
+        <p class="portrait__etapes-title">La victoire</p>
       </div>
       <ul class="portrait__etapes-content">
         <li class="portrait__etapes-item">1ère partie</li>
@@ -474,7 +474,7 @@
   opacity: 0.4;
 }
 .portrait__etapes-title{
-
+  font-weight: bold;
 }
 .portrait__etapes-content{
   margin: 18px 0 5px 0;
