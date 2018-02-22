@@ -255,7 +255,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background: url("../assets/img/Portrait_lefur4@2x.png") 30px 50px no-repeat;
+    background: url("../assets/img/Portrait_lefur4.png") 30px 50px no-repeat;
     background-size: cover;
     z-index: $z-index-portrait-bg;
   }
@@ -407,21 +407,21 @@
   .portrait__part1-image {
     width: 100%;
     height: 650px;
-    background: url('../assets/img/malf-tpe-site2@2x.png') top no-repeat;
+    background: url('../assets/img/malf-tpe-site2.png') top no-repeat;
     background-size: 200%;
   }
 
   .portrait__part2-image {
     width: 100%;
     height: 767px;
-    background: url('../assets/img/jo20161608@2x.png') center no-repeat;
+    background: url('../assets/img/jo20161608.png') center no-repeat;
     background-size: 320%;
   }
 
   .portrait__part3-image {
     width: 100%;
     height: 950px;
-    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio@2x.png') 35% -100px no-repeat;
+    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio.png') 35% -100px no-repeat;
     background-size: 300%;
   }
 
@@ -439,7 +439,7 @@
   .portrait__part4-image {
     width: 100%;
     height: 867px;
-    background: url('../assets/img/2016-rio-paralympics-day-5-2@2x.png') 45% 50px no-repeat;
+    background: url('../assets/img/2016-rio-paralympics-day-5-2.png') 45% 50px no-repeat;
     background-size: 250%;
   }
 </style>
