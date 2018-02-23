@@ -7,7 +7,7 @@
         <div class="select__content-items">
 
           <div class="select__item select-martinet" id="selectLeft">
-            <img class="select__item-image" src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
+            <img class="select__item-image" src="../assets/img/Martinet.png" alt="Marie-Amélie Le fur">
             <div class="select__item-content">
               <div class="select__item-title">
                 <div class="select__item-nickname-container">
@@ -23,6 +23,7 @@
           </div>
            <div class="select__item select-lefur" id="selectCenter">
              <img class="select__item-image" src="../assets/img/Portrait_lefur4.png" alt="Marie-Amélie Le fur">
+             <img class="portrait__intro-gif-a" src="../assets/img/mask.gif" alt="masque de super héro de Amélie">
              <div class="select__item-content">
                <div class="select__item-title">
                  <div class="select__item-nickname-container">
@@ -38,7 +39,8 @@
              </div>
            </div>
            <div class="select__item select-jeremiasz" id="selectRight">
-             <img class="select__item-image" src="../assets/img/Portrait_jeremiasz.png" alt="Michael Jeremiasz">
+             <img class="select__item-image" src="../assets/img/portrait_jeremiasz.png" alt="Michael Jeremiasz">
+              <img class="portrait__intro-gif-m" src="../assets/img/mask-j.gif" alt="masque de super héro de Michael">
              <div class="select__item-content">
                <div class="select__item-title">
                  <div class="select__item-nickname-container">
@@ -54,11 +56,13 @@
            </div>
 
         </div>
+    </div>
+    <div class="overlay__top"></div>
+        <div class="overlay__bottom"></div>
         <div class="select__content-scroll">
           <p class="select__content-scroll-text">Scroll to<br> explore</p>
           <div class="select__content-scroll-line"></div>
         </div>
-    </div>
   </div>
   </transition>
 </template>
@@ -211,6 +215,25 @@ body{
 /* FIN A SUPPRIMER */
 
 
+.portrait__intro-gif-a {
+    position: absolute;
+    top: 60px;
+    width: 90%;
+    left: -10px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
+  .portrait__intro-gif-m {
+    position: absolute;
+    width: 110%;
+    top: 160px;
+    left: -20px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
 
 .select{
   width: 100%;
@@ -227,15 +250,22 @@ body{
   width: 300px;
   height: 100%;
   margin: 0 auto;
+   @media #{$desktop} {
+      left: 100px;
+      max-width: 600px;
+    }
 }
 
 .select__content-scroll{
   position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  text-align: left;
+   z-index: $z-index-above-items;
+   bottom: 0;
+   left: 40px;
+   width: 100%;
+   text-align: left;
+    @media #{$desktop} {
+      left: 100px;
+    }
 }
 .select__content-scroll-text{
   font-size: 11px;
@@ -329,6 +359,24 @@ body{
 .select-martinet .select__item-title{
   font-size: 30px;
 }
+
+.overlay__top {
+  z-index: $z-index-above-items - 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+}
+
+  .overlay__bottom {
+    z-index: $z-index-above-items - 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 215px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
+  }
 
 /* Enter and Leave transitions */
 .v-enter {

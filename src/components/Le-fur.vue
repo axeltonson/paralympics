@@ -1,10 +1,11 @@
 <template>
   <div>
-    <div class="info-component">
-      <info></info>
-    </div>
+    <transition name="slide-in">
+      <info v-if="isDisplayingInfo"></info>
+    </transition>
     <div class="portrait__intro-bg">
-      <div class="portrait__intro-bg-overlay"></div>
+      <img class="portrait__intro-gif" src="../assets/img/mask.gif" alt="masque de super héro de Amélie">
+      <div class="portrait__intro-bg-overlay"></div >
     </div>
     <div class="portrait-container">
       <div class="portrait__intro is-scrolling">
@@ -62,7 +63,7 @@
           On dit qu’un jour peut faire basculer une vie pourtant il a suffit de quelques secondes pour que Marie-Amélie devienne la femme la plus rapide du monde, au Jeux Olympiques de Londres en 2012.
         </p>
         <div class="portrait__part1-video">
-          <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing" width="246" height="138"></youtube>
+          <youtube :video-id="videoId" ref="youtube" :player-vars="playerVars" @playing="playing" width="100%" height="100%"></youtube>
           <!-- <div class="portrait__part1-video-youtube" @click="playVideo">
             <img class="portrait__part1-video-youtube-controls" src="../assets/img/play.svg" alt="play video">
           </div> -->
@@ -77,7 +78,9 @@
       </div>
     </div>
 
-    <div class="portrait__part1-image"></div>
+    <div class="portrait__part1-image">
+      <img class="portrait__part1-gif" src="../assets/img/cape.gif" alt="cape de super héro de Amélie">
+    </div>
 
     <div class="portrait-container">
       <div class="portrait__part-text-block">
@@ -196,18 +199,20 @@
         videoId: '2_vPxntIHI8',
         playerVars: {
           controls: 1
-        }
+        },
+        isDisplayingInfo: false
       }
     },
     mounted: function () {
       const instance = basicScroll.create({
         elem: document.querySelector('.portrait__part2'),
-        from: 'top-middle',
-        to: 'bottom-top',
+        from: 'top-bottom',
+        to: 'bottom-middle',
         inside: (instance, percentage, props) => {
+          this.isDisplayingInfo = true
         },
         outside: (instance, percentage, props) => {
-          document.querySelector('.info-component').classList.remove('is-active')
+          this.isDisplayingInfo = false
         }
       })
       instance.start()
@@ -238,6 +243,9 @@
 
   h1 {
     line-height: 0.91;
+     @media #{$desktop} {
+      margin-top: 100px;
+    }
   }
 
   h3 {
@@ -247,15 +255,20 @@
     margin: 20px 0 10px;
   }
 
-  .info-component {
-    display: none;
-    &.is-active {
-      display: block;
-    }
-  }
+.slide-in-enter-active {
+  transition: all .3s ease;
+}
+.slide-in-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-in-enter, .slide-in-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(100px);
+  opacity: 0;
+}
 
   .link-bold {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .portrait__intro-bg {
@@ -263,11 +276,35 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background: url("../assets/img/Portrait_lefur4@2x.png") 30px 50px no-repeat;
-    background-size: 200%;
+    background: url("../assets/img/Portrait_lefur4.png") 30px 50px no-repeat;
+    background-size: cover;
     z-index: $z-index-portrait-bg;
     transition: 0.5s;
     box-shadow: 0 -20px 90px black inset;
+    @media #{$desktop} {
+      background: url("../assets/img/Portrait_lefur4@2x.png") top right no-repeat;
+      background-size: 700px;
+      height: 1524px;
+    }
+  }
+
+  .portrait__intro-gif {
+    position: absolute;
+    width: 90%;
+    left: 20px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
+  }
+
+  .portrait__part1-gif {
+    position: relative;
+    width: 120%;
+    left: -70px;
+    top: 150px;
+      @media #{$tablet} {
+      opacity: 0;
+    }
   }
 
   .portrait__intro-bg-overlay {
@@ -287,6 +324,9 @@
       margin-top: 80px;
       transition: 0.5s;
     }
+    @media #{$desktop} {
+      max-width: 455px;
+    }
   }
 
   .portrait-container {
@@ -297,9 +337,13 @@
     padding: 0 40px;
     color: $white;
     font-size: 22px;
-    font-weight: 300;
-    line-height: 1.3;
+    font-weight: 200;
+    line-height: 1.6;
     z-index: $z-index-portrait-container;
+    @media #{$desktop} {
+      margin: 0 auto;
+      max-width: 946px;
+    }
   }
 
   .portrait__slider-nickname-container {
@@ -399,8 +443,8 @@
   .portrait__titles-title,
   .portrait__records-record {
     font-size: 14px;
-    font-weight: 300;
-    line-height: 1.4;
+    font-weight: 200;
+    line-height: 1.6;
   }
 
   .overlay__top {
@@ -453,15 +497,30 @@
     background-size: 100%;
   }
 
+  .portrait__part1,
+  .portrait__part2,
+  .portrait__part-text-block {
+    @media #{$desktop} {
+      max-width: 598px;
+    }
+  }
 
 /* Part 1 */
   .portrait__part1-video {
+    margin-left: 78px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 246px;
     height: 138px;
+    @media #{$desktop} {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 724px;
+      height: 408px;
+      margin-left: 0;
+    }
   }
 
   .portrait__part-text {
@@ -471,22 +530,38 @@
   .portrait__part1-image {
     width: 100%;
     height: 650px;
-    background: url('../assets/img/malf-tpe-site2@2x.png') top no-repeat;
+    background: url('../assets/img/malf-tpe-site2.png') top no-repeat;
     background-size: 200%;
+    overflow: hidden;
+     @media #{$tablet} {
+      background: url('../assets/img/malf-tpe-site2@2x.png') center no-repeat;
+      background-size: 80%;
+      height: 980px;
+    }
   }
 
   .portrait__part2-image {
     width: 100%;
     height: 767px;
-    background: url('../assets/img/jo20161608@2x.png') center no-repeat;
+    background: url('../assets/img/jo20161608.png') center no-repeat;
     background-size: 320%;
+    @media #{$tablet} {
+      height: 1024px;
+      background: url('../assets/img/jo20161608@2x.png') center no-repeat;
+      background-size: 120%;
+    }
   }
 
   .portrait__part3-image {
     width: 100%;
     height: 950px;
-    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio@2x.png') 35% -100px no-repeat;
+    background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio.png') 35% -100px no-repeat;
     background-size: 300%;
+     @media #{$tablet} {
+      height: 980px;
+      background: url('../assets/img/7784838782_marie-amelie-le-fur-en-septembre-2016-a-rio@2x.png') center no-repeat;
+      background-size: 70%;
+    }
   }
 
   .portrait__instamoment {
@@ -494,6 +569,19 @@
     z-index: $z-index-above-medias;
     width: 100%;
     height: auto;
+    @media #{$tablet} {
+      margin-left: 40%;
+      width: 448px;
+      &::before {
+        position: absolute;
+        left: 19px;
+        top: 19px;
+        content: '';
+        width: 48px;
+        height: 48px;
+        background: url('../assets/img/instagram.svg') center no-repeat;
+      }
+    }
   }
 
   .portrait__part-text-block-end {
@@ -503,8 +591,12 @@
   .portrait__part4-image {
     width: 100%;
     height: 867px;
-    background: url('../assets/img/2016-rio-paralympics-day-5-2@2x.png') 45% 50px no-repeat;
+    background: url('../assets/img/2016-rio-paralympics-day-5-2.png') 45% 50px no-repeat;
     background-size: 250%;
+     @media #{$tablet} {
+      background: url('../assets/img/2016-rio-paralympics-day-5-2@2x.png') top no-repeat;
+      background-size: 80%;
+    }
   }
 
 .portrait__etapes{
