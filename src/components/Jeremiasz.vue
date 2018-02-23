@@ -1,18 +1,18 @@
 <template>
   <div class="portrait">
-    <div class="portrait__intro-bg">
+    <div class="portrait__intro-bg portrait-jeremiasz">
       <div class="portrait__intro-bg-overlay"></div>
     </div>
     <div class="portrait-container">
       <div class="portrait__intro is-scrolling">
         <div class="portrait__slider-title">
-          <div class="portrait__slider-nickname-container is-hidden">
-            <div class="dash is-hidden"></div>
-            <span class="portrait__slider-nickname is-hidden">&laquo; Le militant &raquo;</span>
+          <div class="portrait__slider-nickname-container">
+            <div class="dash"></div>
+            <span class="portrait__slider-nickname">&laquo; Le militant &raquo;</span>
           </div>
           <h1>Michael Jeremiasz</h1>
           <div class="portrait-quote">« Je ne me limite pas aux limites que la société me fixe »</div>
-          <div class="dash"></div>
+          <div class="dash dash-under"></div>
         </div>
         <div class="portrait__slider-subtitle">
           <p>Tennis</p>
@@ -213,8 +213,10 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     width: 100%;
     height: 100vh;
     background: url("../assets/img/portrait_jeremiasz@2x.png") 0 50px no-repeat;
-    background-size: cover;
+    background-size: 200%;
     z-index: $z-index-portrait-bg;
+    transition: 0.5s;
+    box-shadow: 0 -20px 90px black inset;
   }
 
   .portrait__intro-bg-overlay {
@@ -231,7 +233,8 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
   .portrait__intro {
     margin-bottom: 50px;
     &.is-scrolling {
-      margin-top: 50px;
+      margin-top: 80px;
+      transition: 0.5s;
     }
   }
 
@@ -251,6 +254,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     display: flex;
     align-items: center;
     margin-bottom: 3px;
+    max-height: 0px;
+    opacity: 0;
+    transition: 0.5s;
   }
   .portrait__slider-nickname {
     font-size: 25px;
@@ -262,6 +268,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     height: 2px;
     margin: 20px 20px 20px 0;
     background-color: $white;
+  }
+  .dash-under{
+    transition: 0.5s;
   }
   .portrait__slider-subtitle {
     font-size: 14px;
@@ -275,6 +284,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     font-weight: 200;
     font-style: italic;
     text-align: left;
+    transition: 0.5s;
+    opacity: 1;
+    max-height: 65px;
   }
 
   .portrait__medal-medals {
@@ -299,6 +311,40 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     line-height: 1.4;
   }
 
+  /* Portrait intro transition */
+  .selected .portrait__intro{}
+
+  .selected .portrait__intro.is-scrolling{
+      margin-top: 250px;
+  }
+
+  .selected .portrait__slider-nickname-container{
+    max-height: 45px;
+    opacity: 1;
+  }
+
+  .selected .portrait-quote {
+    opacity: 0;
+    max-height: 0;
+  }
+  .selected .portrait__medal{
+    opacity: 0;
+  }
+  .selected .portrait__titles{
+    opacity: 0;
+  }
+
+  .selected .dash-under{
+    opacity: 0;
+    margin: 0;
+  }
+
+  .selected .portrait__intro-bg{
+    background-size: 120%;
+  }
+
+
+/* Part 1 */
   .portrait__part-video {
     margin-top: 20px;
     margin-bottom: 60px;

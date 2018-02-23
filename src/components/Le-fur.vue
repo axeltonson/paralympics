@@ -9,15 +9,15 @@
     <div class="portrait-container">
       <div class="portrait__intro is-scrolling">
         <div class="portrait__slider-title">
-          <div class="portrait__slider-nickname-container is-hidden">
-            <div class="dash is-hidden"></div>
-            <span class="portrait__slider-nickname is-hidden">&laquo; Le guépard &raquo;</span>
+          <div class="portrait__slider-nickname-container">
+            <div class="dash"></div>
+            <span class="portrait__slider-nickname">&laquo; Le guépard &raquo;</span>
           </div>
           <h1>
             Marie-Amélie Le Fur
           </h1>
           <div class="portrait-quote">"« Fais de ta vie un rêve et d’un rêve une réalité »</div>
-          <div class="dash"></div>
+          <div class="dash dash-under"></div>
         </div>
         <div class="portrait__slider-subtitle">
           <p>Longueur, 100 m, 200 m, 400 m
@@ -258,18 +258,16 @@
     font-weight: bold;
   }
 
-  .is-hidden {
-    display: none;
-  }
-
   .portrait__intro-bg {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100vh;
     background: url("../assets/img/Portrait_lefur4@2x.png") 30px 50px no-repeat;
-    background-size: cover;
+    background-size: 200%;
     z-index: $z-index-portrait-bg;
+    transition: 0.5s;
+    box-shadow: 0 -20px 90px black inset;
   }
 
   .portrait__intro-bg-overlay {
@@ -286,7 +284,8 @@
   .portrait__intro {
     margin-bottom: 50px;
     &.is-scrolling {
-      margin-top: 50px;
+      margin-top: 80px;
+      transition: 0.5s;
     }
   }
 
@@ -307,6 +306,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 3px;
+    opacity: 0;
+    max-height: 0;
+    transition: 0.5s;
   }
 
   .portrait__slider-nickname {
@@ -320,6 +322,10 @@
     height: 2px;
     margin: 20px 20px 20px 0;
     background-color: $white;
+  }
+  .dash-under{
+    transition: 0.5s;
+    opacity: 1;
   }
 
   .portrait__slider-subtitle {
@@ -359,6 +365,14 @@
     font-weight: 200;
     font-style: italic;
     text-align: left;
+    transition: 0.5s;
+    opacity: 1;
+    max-height: 65px;
+  }
+
+  .portrait__medal{
+    transition: 0.5s;
+    opacity: 1;
   }
 
   .portrait__medal-medals {
@@ -378,6 +392,10 @@
     margin-bottom: 2px;
   }
 
+.portrait__titles{
+  opacity: 1;
+  transition: 0.5s;
+}
   .portrait__titles-title,
   .portrait__records-record {
     font-size: 14px;
@@ -403,6 +421,40 @@
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000 65%, #000000);
   }
 
+  /* Portrait intro transition */
+  .selected .portrait__intro{}
+
+  .selected .portrait__intro.is-scrolling{
+      margin-top: 250px;
+  }
+
+  .selected .portrait__slider-nickname-container{
+    max-height: 45px;
+    opacity: 1;
+  }
+
+  .selected .portrait-quote {
+    opacity: 0;
+    max-height: 0;
+  }
+  .selected .portrait__medal{
+    opacity: 0;
+  }
+  .selected .portrait__titles{
+    opacity: 0;
+  }
+
+  .selected .dash-under{
+    opacity: 0;
+    margin: 0;
+  }
+
+  .selected .portrait__intro-bg{
+    background-size: 100%;
+  }
+
+
+/* Part 1 */
   .portrait__part1-video {
     margin-top: 20px;
     margin-bottom: 20px;

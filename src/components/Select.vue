@@ -112,15 +112,23 @@ export default {
     //   document.getElementById('selectHero').setAttribute('h_id', heroId)
     // },
     handleScroll: function (event) {
-      if ((event.deltaY < 0) && (document.querySelector('#app').classList.contains('animate') === false)) {
-        window.removeEventListener('wheel', this.handleScroll)
-        document.querySelector('#app').classList.add('animate')
-        this.scrollUp()
-      }
-      if ((event.deltaY > 0) && (document.querySelector('#app').classList.contains('animate') === false)) {
-        window.removeEventListener('wheel', this.handleScroll)
-        document.querySelector('#app').classList.add('animate')
-        this.scrollDown()
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        if (event.deltaY < 0) {
+          window.removeEventListener('wheel', this.handleScroll)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollUp()
+        }
+        if (event.deltaY > 0) {
+          window.removeEventListener('wheel', this.handleScroll)
+          document.querySelector('#app').classList.add('animate')
+          this.scrollDown()
+        }
+      } else {
+        var e = event || window.event
+        if (e.preventDefault) {
+          e.preventDefault()
+        }
+        e.returnValue = false
       }
     },
     handleKey: function (event) {
@@ -133,14 +141,21 @@ export default {
         if (event.keyCode === 40) {
           window.removeEventListener('keyup', this.handleKey)
           document.querySelector('#app').classList.add('animate')
-          this.scrollDown()
+          this.scrollDown(event)
         }
+      }
+    },
+    handleTouch: function (event) {
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        document.getElementById('selectCenter').removeEventListener('touchstart', this.handleTouch)
+        document.querySelector('#app').classList.add('animate')
+        this.scrollDown()
       }
     },
     scrollUp: function () {
       this.$router.push('/intro')
     },
-    scrollDown: function () {
+    scrollDown: function (e) {
       var heroId = document.getElementById('selectHero').getAttribute('h_id')
       var heroPath = 'Le-fur'
       if (heroId === '1') {
@@ -151,17 +166,26 @@ export default {
         heroPath = 'Jeremiasz'
       }
       this.$router.push('/Portrait/' + heroPath)
+      e = e || window.event
+      if (e.preventDefault) {
+        e.preventDefault()
+      }
+      e.returnValue = false
     },
     clickEvent: function (event) {
       console.log('click')
     }
   },
-  created: function () {
+  mounted: function () {
     window.addEventListener('wheel', this.handleScroll)
     window.addEventListener('keyup', this.handleKey)
+    document.getElementById('selectCenter').addEventListener('touchstart', this.handleTouch)
     setTimeout(function () {
       document.querySelector('#app').classList.remove('animate')
     }, 2000)
+    setTimeout(function () {
+      document.querySelector('#app').classList.remove('animate')
+    }, 6000)
   }
 }
 </script>
@@ -322,6 +346,7 @@ body{
 .v-leave-active {
   /* opacity: 0; */
   transition: opacity 1s;
+  display: none;
 }
 
 </style>

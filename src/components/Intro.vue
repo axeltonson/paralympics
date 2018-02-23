@@ -53,6 +53,13 @@ export default {
         }
       }
     },
+    handleTouch: function (event) {
+      if (document.querySelector('#app').classList.contains('animate') === false) {
+        window.removeEventListener('touchstart', this.handleTouch)
+        document.querySelector('#app').classList.add('animate')
+        this.scrollDown()
+      }
+    },
     scrollUp: function () {
       this.$router.push('/')
     },
@@ -63,9 +70,10 @@ export default {
       console.log('click')
     }
   },
-  created: function () {
+  mounted: function () {
     window.addEventListener('wheel', this.handleScroll)
     window.addEventListener('keyup', this.handleKey)
+    window.addEventListener('touchstart', this.handleTouch)
     setTimeout(function () {
       document.querySelector('#app').classList.remove('animate')
     }, 2000)
