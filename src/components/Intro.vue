@@ -3,7 +3,7 @@
     <div class="vue intro" v-on:click="clickEvent">
        <div class="intro__content">
           <p class="intro__content-text">
-             Trois sportif·ve·s français à la volonté extraordinaire,
+             Trois sportif·ve·s français·es à la volonté extraordinaire,
              véritables héros des temps modernes
           </p>
         </div>
