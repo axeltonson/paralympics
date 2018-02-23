@@ -283,13 +283,18 @@
       background-size: 700px !important;
       height: 1524px;
     }
+    @media #{$tablet} {
+      background: url("../assets/img/Portrait_lefur4@2x.png") top right no-repeat;
+      background-size: 700px !important;
+      height: 1524px;
+    }
   }
 
   .portrait__intro-gif {
     position: absolute;
     width: 90%;
     left: 20px;
-      @media #{$tablet} {
+    @media #{$tablet} {
       opacity: 0;
     }
   }
@@ -299,7 +304,7 @@
     width: 120%;
     left: -70px;
     top: 150px;
-      @media #{$tablet} {
+    @media #{$tablet} {
       opacity: 0;
     }
   }
@@ -352,6 +357,9 @@
     transition: 0.5s;
 
      @media #{$desktop} {
+      margin-top: 100px;
+    }
+     @media #{$tablet} {
       margin-top: 100px;
     }
   }
