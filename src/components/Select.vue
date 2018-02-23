@@ -196,9 +196,6 @@ body{
     top: 60px;
     width: 90%;
     left: -10px;
-      @media #{$tablet} {
-      opacity: 0;
-    }
   }
 
   .portrait__intro-gif-m {
@@ -206,9 +203,6 @@ body{
     width: 110%;
     top: 160px;
     left: -20px;
-      @media #{$tablet} {
-      opacity: 0;
-    }
   }
 
 .select{

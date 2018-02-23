@@ -243,7 +243,7 @@
 
   h1 {
     line-height: 0.91;
-     @media #{$desktop} {
+     @media #{$tablet} {
       margin-top: 100px;
     }
   }
@@ -283,7 +283,7 @@
     background: url("../assets/img/Portrait_lefur4.png") 30px 50px no-repeat;
     background-size: cover;
     z-index: $z-index-portrait-bg;
-    @media #{$desktop} {
+    @media #{$tablet} {
       background: url("../assets/img/Portrait_lefur4@2x.png") top right no-repeat; 
       background-size: 700px;
       height: 1524px;
@@ -294,7 +294,7 @@
     position: absolute;
     width: 90%;
     left: 20px;
-      @media #{$tablet} {
+    @media #{$tablet} {
       opacity: 0;
     }
   }
@@ -304,7 +304,7 @@
     width: 120%;
     left: -70px;
     top: 150px;
-      @media #{$tablet} {
+    @media #{$tablet} {
       opacity: 0;
     }
   }
