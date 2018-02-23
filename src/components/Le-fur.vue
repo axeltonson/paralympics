@@ -243,9 +243,6 @@
 
   h1 {
     line-height: 0.91;
-     @media #{$desktop} {
-      margin-top: 100px;
-    }
   }
 
   h3 {
@@ -283,7 +280,7 @@
     box-shadow: 0 -20px 90px black inset;
     @media #{$desktop} {
       background: url("../assets/img/Portrait_lefur4@2x.png") top right no-repeat;
-      background-size: 700px;
+      background-size: 700px !important;
       height: 1524px;
     }
   }
@@ -353,6 +350,10 @@
     opacity: 0;
     max-height: 0;
     transition: 0.5s;
+
+     @media #{$desktop} {
+      margin-top: 100px;
+    }
   }
 
   .portrait__slider-nickname {

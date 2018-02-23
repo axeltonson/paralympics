@@ -115,6 +115,8 @@ h1.hmenu__main-title{
 .hmenu__toggle-menu{
   padding: 60px 50px;
   text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
 }
 .hmenu__toogle-menu-title{
   text-transform: uppercase;

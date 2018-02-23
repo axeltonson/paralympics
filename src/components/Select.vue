@@ -80,41 +80,6 @@ export default {
     'nav-arrows': NavArrows
   },
   methods: {
-    // selectAnim: function (event) {
-    //   if (event.currentTarget.id === 'selectLeft') {
-    //     document.getElementById('selectLeft').id = 'sCenter'
-    //     document.getElementById('selectCenter').id = 'sRight'
-    //     document.getElementById('selectRight').id = 'sLeft'
-    //     document.getElementById('sLeft').id = 'selectLeft'
-    //     document.getElementById('sCenter').id = 'selectCenter'
-    //     document.getElementById('sRight').id = 'selectRight'
-    //     this.leftHero()
-    //   } else if (event.currentTarget.id === 'selectRight') {
-    //     document.getElementById('selectRight').id = 'sCenter'
-    //     document.getElementById('selectCenter').id = 'sLeft'
-    //     document.getElementById('selectLeft').id = 'sRight'
-    //     document.getElementById('sLeft').id = 'selectLeft'
-    //     document.getElementById('sCenter').id = 'selectCenter'
-    //     document.getElementById('sRight').id = 'selectRight'
-    //     this.rightHero()
-    //   }
-    // },
-    // leftHero: function (event) {
-    //   var heroId = document.getElementById('selectHero').getAttribute('h_id')
-    //   heroId = parseInt(heroId) - 1
-    //   if (heroId < 1) {
-    //     heroId = 3
-    //   }
-    //   document.getElementById('selectHero').setAttribute('h_id', heroId)
-    // },
-    // rightHero: function (event) {
-    //   var heroId = document.getElementById('selectHero').getAttribute('h_id')
-    //   heroId = parseInt(heroId) + 1
-    //   if (heroId > 3) {
-    //     heroId = 1
-    //   }
-    //   document.getElementById('selectHero').setAttribute('h_id', heroId)
-    // },
     handleScroll: function (event) {
       if (document.querySelector('#app').classList.contains('animate') === false) {
         if (event.deltaY < 0) {

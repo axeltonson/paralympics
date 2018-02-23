@@ -195,9 +195,6 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
   }
   h1 {
     line-height: 0.91;
-       @media #{$desktop} {
-        margin-top: 100px;
-        }
   }
   h3 {
     font-size: 20px;
@@ -225,7 +222,7 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     box-shadow: 0 -20px 90px black inset;
      @media #{$desktop} {
       background: url("../assets/img/portrait_jeremiasz@2x.png") top right no-repeat;
-      background-size: 700px;
+      background-size: 700px !important;
       height: 1524px;
     }
   }
@@ -309,6 +306,9 @@ Sa saison 2008 ressemble beaucoup à la précédente, il devient cependant méda
     max-height: 0px;
     opacity: 0;
     transition: 0.5s;
+       @media #{$desktop} {
+        margin-top: 100px;
+        }
   }
   .portrait__slider-nickname {
     font-size: 25px;
